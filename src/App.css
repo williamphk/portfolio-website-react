@@ -1,8 +1,8 @@
+/* MAIN */
 #root {
   display: flex;
 }
 
-/* MAIN */
 section {
   padding: 45px 0px;
   margin: 5px;
@@ -14,4 +14,15 @@ section {
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 32px;
+}
+
+/* TABLET */
+@media only screen and (max-width: 1200px) {
+  #root {
+    flex-direction: column;
+  }
+  section {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
