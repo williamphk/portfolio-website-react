@@ -9,10 +9,14 @@ export default function App() {
   return (
     <>
       <Header />
-      <About />
-      <Projects />
-      <Contact />
-      <Footer />
+      <div>
+        <main>
+          <About />
+          <Projects />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }
