@@ -21,7 +21,7 @@ export default function Projects() {
           console.log("intersecting");
           entry.target.parentElement.parentElement.classList.add("show");
           if (!intersectingImageArray.includes(imageID)) {
-            intersectingImageArray.push(imageID);
+            setIntersectingImageArray((prevArray) => [...prevArray, imageID]);
           }
           imageElements.forEach((el, index) => {
             if (index == imageID) {
@@ -33,7 +33,9 @@ export default function Projects() {
         } else {
           const index = intersectingImageArray.indexOf(imageID);
           if (index > -1) {
-            intersectingImageArray.splice(index, 1);
+            setIntersectingImageArray((prevArray) =>
+              prevArray.filter((id) => id !== imageID)
+            );
           }
           if (intersectingImageArray.length > 0) {
             imageElements.forEach((el, index) => {
@@ -51,9 +53,9 @@ export default function Projects() {
       });
     });
 
-    Array.from(
-      observeElementsRef.current.querySelectorAll(".intersecting-element")
-    ).forEach((el) => observer.observe(el));
+    [
+      ...observeElementsRef.current.querySelectorAll(".intersecting-element"),
+    ].forEach((el) => observer.observe(el));
 
     return () => observer.disconnect(); // Cleanup on unmount
   }, [intersectingImageArray]);
