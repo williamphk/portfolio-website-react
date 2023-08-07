@@ -1,14 +1,36 @@
+import { useState, useEffect, useRef } from "react";
+
 import "./Projects.css";
 import projectOne from "../assets/project-one.webp";
 import projectTwo from "../assets/project-two.webp";
 import projectThree from "../assets/project-three.webp";
 
 export default function Projects() {
+  const [intersectingImageArray, setIntersectingImageArray] = useState([]);
+  const observeElementsRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log("intersecting");
+          entry.target.parentElement.parentElement.classList.add("show");
+        }
+      });
+    });
+
+    Array.from(
+      observeElementsRef.current.querySelectorAll(".intersecting-element")
+    ).forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect(); // Cleanup on unmount
+  }, [intersectingImageArray]);
+
   return (
     <section className="work" id="work">
       <h2 className="section-title">Crafted with Heart</h2>
       <div className="project-wrapper">
-        <div className="project">
+        <div className="project" ref={observeElementsRef}>
           <article className="project-one">
             <div className="project-introduction hidden">
               <div>

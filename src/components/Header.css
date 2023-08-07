@@ -6,6 +6,7 @@ header,
   color: var(--primaryColor);
   align-items: center;
   background-color: #e9e9ee;
+  z-index: 1;
 }
 
 nav {
@@ -13,7 +14,6 @@ nav {
   padding-left: clamp(1em, 2vw, 2em);
   padding-right: clamp(1em, 2vw, 2em);
   position: static;
-  z-index: 1;
 }
 
 .nav-link {
