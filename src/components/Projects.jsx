@@ -12,9 +12,41 @@ export default function Projects() {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
+        const projectWrapper = entry.target.closest(".project-wrapper");
+        const imageWrapper = projectWrapper.querySelector(".image-wrapper");
+        const imageElements = imageWrapper.querySelectorAll("img");
+        const imageID = entry.target.getAttribute("data-img");
+
         if (entry.isIntersecting) {
           console.log("intersecting");
           entry.target.parentElement.parentElement.classList.add("show");
+          if (!intersectingImageArray.includes(imageID)) {
+            intersectingImageArray.push(imageID);
+          }
+          imageElements.forEach((el, index) => {
+            if (index == imageID) {
+              el.style.display = "block";
+            } else {
+              el.style.display = "none";
+            }
+          });
+        } else {
+          const index = intersectingImageArray.indexOf(imageID);
+          if (index > -1) {
+            intersectingImageArray.splice(index, 1);
+          }
+          if (intersectingImageArray.length > 0) {
+            imageElements.forEach((el, index) => {
+              if (
+                index ==
+                intersectingImageArray[intersectingImageArray.length - 1]
+              ) {
+                el.style.display = "block";
+              } else {
+                el.style.display = "none";
+              }
+            });
+          }
         }
       });
     });
