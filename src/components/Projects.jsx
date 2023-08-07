@@ -5,6 +5,15 @@ import projectOne from "../assets/project-one.webp";
 import projectTwo from "../assets/project-two.webp";
 import projectThree from "../assets/project-three.webp";
 
+import register from "../assets/videos/Project_1/Register.mp4";
+import oauth from "../assets/videos/Project_1/OAuth.mp4";
+import post from "../assets/videos/Project_1/Post.mp4";
+import friend from "../assets/videos/Project_1/Friend.mp4";
+import profile from "../assets/videos/Project_1/Profile.mp4";
+import drag from "../assets/videos/Project_3/Drag-n-drop.mp4";
+import click from "../assets/videos/Project_3/Click.mp4";
+import restart from "../assets/videos/Project_3/Restart.mp4";
+
 export default function Projects() {
   const [intersectingImageArray, setIntersectingImageArray] = useState([]);
   const observeElementsRef = useRef(null);
@@ -53,12 +62,70 @@ export default function Projects() {
       });
     });
 
-    [
-      ...observeElementsRef.current.querySelectorAll(".intersecting-element"),
-    ].forEach((el) => observer.observe(el));
+    observeElementsRef.current
+      .querySelectorAll(".intersecting-element")
+      .forEach((el) => observer.observe(el));
 
     return () => observer.disconnect(); // Cleanup on unmount
   }, [intersectingImageArray]);
+
+  let video = document.createElement("video");
+  video.setAttribute("controls", "");
+  let source = document.createElement("source");
+  source.setAttribute("type", "video/mp4");
+  video.appendChild(source);
+
+  const [selectedVideo, setSelectedVideo] = useState(null);
+
+  const videoSrcArray1 = [register, oauth, post, friend, profile];
+  const videoSrcArray3 = [drag, click, restart];
+
+  const changeVideo = (e) => {
+    e.target
+      .closest(".project-wrapper")
+      .querySelectorAll("span")
+      .forEach((el) => {
+        if (el.innerHTML === "stop_circle") el.innerHTML = "play_circle";
+      });
+    e.target.querySelector("span")
+      ? (e.target.querySelector("span").innerHTML = "stop_circle")
+      : (e.target.innerHTML = "stop_circle");
+    e.target
+      .closest(".project-wrapper")
+      .querySelectorAll(".project-image")
+      .forEach((el) => {
+        el.style.display = "none";
+      });
+    video.style.display = "block";
+    video.load();
+    video.play();
+    video.width = window.innerWidth / 2 - 40;
+    video.height = ((window.innerWidth / 2 - 40) * 9) / 16;
+    e.target
+      .closest(".project-wrapper")
+      .querySelector(".image-wrapper")
+      .appendChild(video);
+    if (
+      e.target.matches(".hover1") ||
+      e.target.parentElement.matches(".hover1")
+    ) {
+      source.src = videoSrcArray1[getElementIndex(e.target)];
+    } else if (
+      e.target.matches(".hover3") ||
+      e.target.parentElement.matches(".hover3")
+    ) {
+      source.src = videoSrcArray3[getElementIndex(e.target)];
+    }
+    video.addEventListener("ended", function () {
+      e.target.querySelector("span")
+        ? (e.target.querySelector("span").innerHTML = "play_circle")
+        : (e.target.innerHTML = "play_circle");
+    });
+  };
+
+  function getElementIndex(element) {
+    return Array.from(element.parentNode.children).indexOf(element);
+  }
 
   return (
     <section className="work" id="work">
@@ -89,36 +156,36 @@ export default function Projects() {
                 <div className="intersecting-element" data-img="0"></div>
                 <h4 className="project-description">Features:</h4>
                 <div className="hover-wrapper1">
-                  <div className="hover1">
+                  <button className="hover1" onClick={changeVideo}>
                     Register & Login
                     <span className="material-symbols-outlined">
                       play_circle
                     </span>
-                  </div>
-                  <div className="hover1">
+                  </button>
+                  <button className="hover1" onClick={changeVideo}>
                     Facebook OAuth
                     <span className="material-symbols-outlined">
                       play_circle
                     </span>
-                  </div>
-                  <div className="hover1">
+                  </button>
+                  <button className="hover1" onClick={changeVideo}>
                     Post & comment
                     <span className="material-symbols-outlined">
                       play_circle
                     </span>
-                  </div>
-                  <div className="hover1">
+                  </button>
+                  <button className="hover1" onClick={changeVideo}>
                     Friend request & Friend
                     <span className="material-symbols-outlined">
                       play_circle
                     </span>
-                  </div>
-                  <div className="hover1">
+                  </button>
+                  <button className="hover1" onClick={changeVideo}>
                     Profile
                     <span className="material-symbols-outlined">
                       play_circle
                     </span>
-                  </div>
+                  </button>
                 </div>
                 <p className="project-description">
                   {/* node */}
@@ -252,24 +319,24 @@ export default function Projects() {
                 <div className="intersecting-element" data-img="2"></div>
                 <h4 className="project-description">Features:</h4>
                 <div className="hover-wrapper3">
-                  <div className="hover3">
+                  <button className="hover3" onClick={changeVideo}>
                     Drag & drop
                     <span className="material-symbols-outlined">
                       play_circle
                     </span>
-                  </div>
-                  <div className="hover3">
+                  </button>
+                  <button className="hover3" onClick={changeVideo}>
                     Click to hit the ships
                     <span className="material-symbols-outlined">
                       play_circle
                     </span>
-                  </div>
-                  <div className="hover3">
+                  </button>
+                  <button className="hover3" onClick={changeVideo}>
                     Restart
                     <span className="material-symbols-outlined">
                       play_circle
                     </span>
-                  </div>
+                  </button>
                 </div>
                 <p className="project-description">
                   {/* html */}
