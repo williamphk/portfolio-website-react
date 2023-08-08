@@ -17,28 +17,31 @@ import restart from "../assets/videos/Project_3/Restart.mp4";
 export default function Projects() {
   const [intersectingImageArray, setIntersectingImageArray] = useState([]);
   const observeElementsRef = useRef(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(null);
+
+  const imageArray = [projectOne, projectTwo, projectThree];
+
+  const [currentVideoSrc, setCurrentVideoSrc] = useState(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(null);
+
+  const videoSrcArray1 = [register, oauth, post, friend, profile];
+  const videoSrcArray3 = [drag, click, restart];
+
+  const videoWidth = window.innerWidth / 2 - 40;
+  const videoHeight = ((window.innerWidth / 2 - 40) * 9) / 16;
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        const projectWrapper = entry.target.closest(".project-wrapper");
-        const imageWrapper = projectWrapper.querySelector(".image-wrapper");
-        const imageElements = imageWrapper.querySelectorAll("img");
         const imageID = entry.target.getAttribute("data-img");
 
         if (entry.isIntersecting) {
-          console.log("intersecting");
+          setIsPlaying(false);
           entry.target.parentElement.parentElement.classList.add("show");
           if (!intersectingImageArray.includes(imageID)) {
-            setIntersectingImageArray((prevArray) => [...prevArray, imageID]);
+            setIntersectingImageArray([...intersectingImageArray, imageID]);
           }
-          imageElements.forEach((el, index) => {
-            if (index == imageID) {
-              el.style.display = "block";
-            } else {
-              el.style.display = "none";
-            }
-          });
         } else {
           const index = intersectingImageArray.indexOf(imageID);
           if (index > -1) {
@@ -47,16 +50,9 @@ export default function Projects() {
             );
           }
           if (intersectingImageArray.length > 0) {
-            imageElements.forEach((el, index) => {
-              if (
-                index ==
-                intersectingImageArray[intersectingImageArray.length - 1]
-              ) {
-                el.style.display = "block";
-              } else {
-                el.style.display = "none";
-              }
-            });
+            setCurrentImageIndex(
+              intersectingImageArray[intersectingImageArray.length - 1]
+            );
           }
         }
       });
@@ -69,63 +65,26 @@ export default function Projects() {
     return () => observer.disconnect(); // Cleanup on unmount
   }, [intersectingImageArray]);
 
-  let video = document.createElement("video");
-  video.setAttribute("controls", "");
-  let source = document.createElement("source");
-  source.setAttribute("type", "video/mp4");
-  video.appendChild(source);
+  const changeVideo = (e, index) => {
+    const hoverClass = e.target.className;
+    let src;
 
-  const [selectedVideo, setSelectedVideo] = useState(null);
-
-  const videoSrcArray1 = [register, oauth, post, friend, profile];
-  const videoSrcArray3 = [drag, click, restart];
-
-  const changeVideo = (e) => {
-    e.target
-      .closest(".project-wrapper")
-      .querySelectorAll("span")
-      .forEach((el) => {
-        if (el.innerHTML === "stop_circle") el.innerHTML = "play_circle";
-      });
-    e.target.querySelector("span")
-      ? (e.target.querySelector("span").innerHTML = "stop_circle")
-      : (e.target.innerHTML = "stop_circle");
-    e.target
-      .closest(".project-wrapper")
-      .querySelectorAll(".project-image")
-      .forEach((el) => {
-        el.style.display = "none";
-      });
-    video.style.display = "block";
-    video.load();
-    video.play();
-    video.width = window.innerWidth / 2 - 40;
-    video.height = ((window.innerWidth / 2 - 40) * 9) / 16;
-    e.target
-      .closest(".project-wrapper")
-      .querySelector(".image-wrapper")
-      .appendChild(video);
     if (
-      e.target.matches(".hover1") ||
-      e.target.parentElement.matches(".hover1")
+      hoverClass.includes("hover1") ||
+      e.target.parentElement.className.includes("hover1")
     ) {
-      source.src = videoSrcArray1[getElementIndex(e.target)];
+      src = videoSrcArray1[index];
     } else if (
-      e.target.matches(".hover3") ||
-      e.target.parentElement.matches(".hover3")
+      hoverClass.includes("hover3") ||
+      e.target.parentElement.className.includes("hover3")
     ) {
-      source.src = videoSrcArray3[getElementIndex(e.target)];
+      src = videoSrcArray3[index];
     }
-    video.addEventListener("ended", function () {
-      e.target.querySelector("span")
-        ? (e.target.querySelector("span").innerHTML = "play_circle")
-        : (e.target.innerHTML = "play_circle");
-    });
-  };
 
-  function getElementIndex(element) {
-    return Array.from(element.parentNode.children).indexOf(element);
-  }
+    setCurrentVideoIndex(index);
+    setCurrentVideoSrc(src);
+    setIsPlaying(true);
+  };
 
   return (
     <section className="work" id="work">
@@ -156,36 +115,27 @@ export default function Projects() {
                 <div className="intersecting-element" data-img="0"></div>
                 <h4 className="project-description">Features:</h4>
                 <div className="hover-wrapper1">
-                  <button className="hover1" onClick={changeVideo}>
-                    Register & Login
-                    <span className="material-symbols-outlined">
-                      play_circle
-                    </span>
-                  </button>
-                  <button className="hover1" onClick={changeVideo}>
-                    Facebook OAuth
-                    <span className="material-symbols-outlined">
-                      play_circle
-                    </span>
-                  </button>
-                  <button className="hover1" onClick={changeVideo}>
-                    Post & comment
-                    <span className="material-symbols-outlined">
-                      play_circle
-                    </span>
-                  </button>
-                  <button className="hover1" onClick={changeVideo}>
-                    Friend request & Friend
-                    <span className="material-symbols-outlined">
-                      play_circle
-                    </span>
-                  </button>
-                  <button className="hover1" onClick={changeVideo}>
-                    Profile
-                    <span className="material-symbols-outlined">
-                      play_circle
-                    </span>
-                  </button>
+                  {videoSrcArray1.map((_, index) => (
+                    <button
+                      className="hover1"
+                      onClick={(e) => changeVideo(e, index)}
+                    >
+                      {
+                        [
+                          "Register & Login",
+                          "Facebook OAuth",
+                          "Post & comment",
+                          "Friend request & Friend",
+                          "Profile",
+                        ][index]
+                      }
+                      <span className="material-symbols-outlined">
+                        {currentVideoIndex === index && isPlaying
+                          ? "stop_circle"
+                          : "play_circle"}
+                      </span>
+                    </button>
+                  ))}
                 </div>
                 <p className="project-description">
                   {/* node */}
@@ -319,24 +269,23 @@ export default function Projects() {
                 <div className="intersecting-element" data-img="2"></div>
                 <h4 className="project-description">Features:</h4>
                 <div className="hover-wrapper3">
-                  <button className="hover3" onClick={changeVideo}>
-                    Drag & drop
-                    <span className="material-symbols-outlined">
-                      play_circle
-                    </span>
-                  </button>
-                  <button className="hover3" onClick={changeVideo}>
-                    Click to hit the ships
-                    <span className="material-symbols-outlined">
-                      play_circle
-                    </span>
-                  </button>
-                  <button className="hover3" onClick={changeVideo}>
-                    Restart
-                    <span className="material-symbols-outlined">
-                      play_circle
-                    </span>
-                  </button>
+                  {videoSrcArray3.map((_, index) => (
+                    <button
+                      className="hover3"
+                      onClick={(e) => changeVideo(e, index)}
+                    >
+                      {
+                        ["Drag & drop", "Click to hit the ships", "Restart"][
+                          index
+                        ]
+                      }
+                      <span className="material-symbols-outlined">
+                        {currentVideoIndex === index && isPlaying
+                          ? "stop_circle"
+                          : "play_circle"}
+                      </span>
+                    </button>
+                  ))}
                 </div>
                 <p className="project-description">
                   {/* html */}
@@ -372,21 +321,30 @@ export default function Projects() {
           </article>
         </div>
         <div className="image-wrapper">
-          <img
-            className="project-image fade"
-            src={projectOne}
-            alt="A screenshot of my project 1"
-          />
-          <img
-            className="project-image fade"
-            src={projectTwo}
-            alt="A screenshot of my project 2"
-          />
-          <img
-            className="project-image fade"
-            src={projectThree}
-            alt="A screenshot of my project 3"
-          />
+          {isPlaying ? (
+            <video
+              controls
+              width={videoWidth}
+              height={videoHeight}
+              style={{ display: isPlaying ? "block" : "none" }}
+              onEnded={() => setIsPlaying(false)}
+              src={currentVideoSrc}
+              autoPlay
+            />
+          ) : (
+            <div>
+              {imageArray.map((_, index) => (
+                <img
+                  className="project-image fade"
+                  src={imageArray[index]}
+                  alt={`A screenshot of my project ${index + 1}`}
+                  style={{
+                    display: currentImageIndex == index ? "block" : "none",
+                  }}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </section>
