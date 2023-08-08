@@ -55,6 +55,7 @@ nav {
   .nav-link {
     gap: min(2em, 4.15vw);
     flex-direction: row;
+    justify-content: center;
   }
 }
 
@@ -66,6 +67,7 @@ nav {
   }
   nav {
     padding: 5px 5px;
+    width: 100%;
   }
   .nav-link {
     flex-direction: column;
@@ -84,6 +86,7 @@ nav {
     cursor: pointer;
     display: flex;
     padding: 0;
+    justify-content: end;
   }
   .show-menu {
     height: calc(100vh - 40px) !important;
