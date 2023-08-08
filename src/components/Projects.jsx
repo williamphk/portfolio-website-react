@@ -14,6 +14,27 @@ import drag from "../assets/videos/Project_3/Drag-n-drop.mp4";
 import click from "../assets/videos/Project_3/Click.mp4";
 import restart from "../assets/videos/Project_3/Restart.mp4";
 
+import react from "../assets/icons/react.svg";
+import node from "../assets/icons/node.svg";
+import mongoDB from "../assets/icons/mongoDB.svg";
+import express from "../assets/icons/express.svg";
+import javascript from "../assets/icons/javascript.svg";
+import html from "../assets/icons/html.svg";
+import css from "../assets/icons/css.svg";
+import tailwind from "../assets/icons/tailwind.svg";
+import passport from "../assets/icons/passport.svg";
+import redux from "../assets/icons/redux.svg";
+import axios from "../assets/icons/axios.svg";
+import aspnet from "../assets/icons/aspnet.svg";
+import csharp from "../assets/icons/csharp.svg";
+import mssql from "../assets/icons/mssql.svg";
+import webpack from "../assets/icons/webpack.svg";
+import github from "../assets/icons/github.svg";
+import bootstrap from "../assets/icons/bootstrap.svg";
+import azureDataStudio from "../assets/icons/azure-data-studio.svg";
+import azure from "../assets/icons/azure.svg";
+import docker from "../assets/icons/docker.svg";
+
 export default function Projects() {
   const [intersectingImageArray, setIntersectingImageArray] = useState([]);
   const observeElementsRef = useRef(null);
@@ -144,16 +165,16 @@ export default function Projects() {
                   ))}
                 </div>
                 <p className="project-description">
-                  {/* node */}
-                  {/* react */}
-                  {/* mongoDB */}
-                  {/* express */}
-                  {/* Passport */}
-                  {/* Tailwind */}
-                  {/* redux */}
-                  {/* axios */}
-                  {/* azure */}
-                  {/* github */}
+                  <img src={node} alt="node" />
+                  <img src={react} alt="react" />
+                  <img src={mongoDB} alt="mongoDB" />
+                  <img src={express} alt="express" />
+                  <img src={passport} alt="passport" />
+                  <img src={tailwind} alt="tailwind" />
+                  <img src={redux} alt="redux" />
+                  <img src={axios} alt="axios" />
+                  <img src={azure} alt="azure" />
+                  <img src={github} alt="github" />
                 </p>
                 <div className="project-button-wrapper">
                   <a
@@ -218,13 +239,13 @@ export default function Projects() {
                   user-specific review editing and image uploading.
                 </p>
                 <p className="project-description">
-                  {/* ASP.NET */}
-                  {/* C# */}
-                  {/* MSSQL */}
-                  {/* azuredatastudio */}
-                  {/* docker */}
-                  {/* bootstrap */}
-                  {/* github */}
+                  <img src={aspnet} alt="aspnet" />
+                  <img src={csharp} alt="csharp" />
+                  <img src={mssql} alt="mssql" />
+                  <img src={azureDataStudio} alt="Azure Data Studio" />
+                  <img src={docker} alt="docker" />
+                  <img src={bootstrap} alt="bootstrap" />
+                  <img src={github} alt="github" />
                 </p>
 
                 <div className="project-button-wrapper">
@@ -294,11 +315,11 @@ export default function Projects() {
                   ))}
                 </div>
                 <p className="project-description">
-                  {/* html */}
-                  {/* css */}
-                  {/* JS */}
-                  {/* webpack */}
-                  {/* github */}
+                  <img src={html} alt="html" />
+                  <img src={css} alt="css" />
+                  <img src={javascript} alt="js" />
+                  <img src={webpack} alt="webpack" />
+                  <img src={github} alt="github" />
                 </p>
                 <div className="project-button-wrapper">
                   <a
