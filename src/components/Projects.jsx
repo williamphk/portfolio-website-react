@@ -32,31 +32,37 @@ export default function Projects() {
   const videoHeight = ((window.innerWidth / 2 - 40) * 9) / 16;
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        const imageID = entry.target.getAttribute("data-img");
+    const mediaQueryTablet = window.matchMedia("(max-width: 1200px)");
+    const rootMargin = mediaQueryTablet.matches ? "400px" : "0px";
 
-        if (entry.isIntersecting) {
-          setIsPlaying(false);
-          entry.target.parentElement.parentElement.classList.add("show");
-          if (!intersectingImageArray.includes(imageID)) {
-            setIntersectingImageArray([...intersectingImageArray, imageID]);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const imageID = entry.target.getAttribute("data-img");
+
+          if (entry.isIntersecting) {
+            setIsPlaying(false);
+            entry.target.parentElement.parentElement.classList.add("show");
+            if (!intersectingImageArray.includes(imageID)) {
+              setIntersectingImageArray([...intersectingImageArray, imageID]);
+            }
+          } else {
+            const index = intersectingImageArray.indexOf(imageID);
+            if (index > -1) {
+              setIntersectingImageArray((prevArray) =>
+                prevArray.filter((id) => id !== imageID)
+              );
+            }
+            if (intersectingImageArray.length > 0) {
+              setCurrentImageIndex(
+                intersectingImageArray[intersectingImageArray.length - 1]
+              );
+            }
           }
-        } else {
-          const index = intersectingImageArray.indexOf(imageID);
-          if (index > -1) {
-            setIntersectingImageArray((prevArray) =>
-              prevArray.filter((id) => id !== imageID)
-            );
-          }
-          if (intersectingImageArray.length > 0) {
-            setCurrentImageIndex(
-              intersectingImageArray[intersectingImageArray.length - 1]
-            );
-          }
-        }
-      });
-    });
+        });
+      },
+      { rootMargin }
+    );
 
     observeElementsRef.current
       .querySelectorAll(".intersecting-element")

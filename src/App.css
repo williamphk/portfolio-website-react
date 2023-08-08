@@ -26,3 +26,16 @@ section {
     padding-right: 0;
   }
 }
+
+/* PHONE */
+@media only screen and (max-width: 415px) {
+  section {
+    padding: 10px 0;
+  }
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 0;
+    text-align: center;
+    padding-left: 0;
+  }
+}
