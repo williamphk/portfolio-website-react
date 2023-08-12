@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Tooltip } from "react-tooltip";
 
 import "./Projects.css";
 import projectOne from "../assets/project-one.webp";
@@ -165,16 +166,76 @@ export default function Projects() {
                   ))}
                 </div>
                 <p className="project-description">
-                  <img src={node} alt="node" />
-                  <img src={react} alt="react" />
-                  <img src={mongoDB} alt="mongoDB" />
-                  <img src={express} alt="express" />
-                  <img src={passport} alt="passport" />
-                  <img src={tailwind} alt="tailwind" />
-                  <img src={redux} alt="redux" />
-                  <img src={axios} alt="axios" />
-                  <img src={azure} alt="azure" />
-                  <img src={github} alt="github" />
+                  <img
+                    src={node}
+                    alt="node"
+                    data-tooltip-id="node-tooltip"
+                    data-tooltip-content="Node.js"
+                  />
+                  <Tooltip id="node-tooltip" />
+                  <img
+                    src={react}
+                    alt="react"
+                    data-tooltip-id="react-tooltip"
+                    data-tooltip-content="React.js"
+                  />
+                  <Tooltip id="react-tooltip" />
+                  <img
+                    src={mongoDB}
+                    alt="mongoDB"
+                    data-tooltip-id="mongoDB-tooltip"
+                    data-tooltip-content="MongoDB"
+                  />
+                  <Tooltip id="mongoDB-tooltip" />
+                  <img
+                    src={express}
+                    alt="express"
+                    data-tooltip-id="express-tooltip"
+                    data-tooltip-content="Express.js"
+                  />
+                  <Tooltip id="express-tooltip" />
+                  <img
+                    src={passport}
+                    alt="passport"
+                    data-tooltip-id="passport-tooltip"
+                    data-tooltip-content="Passport.js"
+                  />
+                  <Tooltip id="passport-tooltip" />
+                  <img
+                    src={tailwind}
+                    alt="tailwind"
+                    data-tooltip-id="tailwind-tooltip"
+                    data-tooltip-content="Tailwind CSS"
+                  />
+                  <Tooltip id="tailwind-tooltip" />
+                  <img
+                    src={redux}
+                    alt="redux"
+                    data-tooltip-id="redux-tooltip"
+                    data-tooltip-content="Redux"
+                  />
+                  <Tooltip id="redux-tooltip" />
+                  <img
+                    src={axios}
+                    alt="axios"
+                    data-tooltip-id="axios-tooltip"
+                    data-tooltip-content="Axios"
+                  />
+                  <Tooltip id="axios-tooltip" />
+                  <img
+                    src={azure}
+                    alt="azure"
+                    data-tooltip-id="azure-tooltip"
+                    data-tooltip-content="Azure"
+                  />
+                  <Tooltip id="azure-tooltip" />
+                  <img
+                    src={github}
+                    alt="github"
+                    data-tooltip-id="github-tooltip"
+                    data-tooltip-content="Github"
+                  />
+                  <Tooltip id="github-tooltip" />
                 </p>
                 <div className="project-button-wrapper">
                   <a
@@ -239,13 +300,55 @@ export default function Projects() {
                   user-specific review editing and image uploading.
                 </p>
                 <p className="project-description">
-                  <img src={aspnet} alt="aspnet" />
-                  <img src={csharp} alt="csharp" />
-                  <img src={mssql} alt="mssql" />
-                  <img src={azureDataStudio} alt="Azure Data Studio" />
-                  <img src={docker} alt="docker" />
-                  <img src={bootstrap} alt="bootstrap" />
-                  <img src={github} alt="github" />
+                  <img
+                    src={aspnet}
+                    alt="aspnet"
+                    data-tooltip-id="aspnet-tooltip"
+                    data-tooltip-content="ASP.NET MVC"
+                  />
+                  <Tooltip id="aspnet-tooltip" />
+                  <img
+                    src={csharp}
+                    alt="csharp"
+                    data-tooltip-id="csharp-tooltip"
+                    data-tooltip-content="C#"
+                  />
+                  <Tooltip id="csharp-tooltip" />
+                  <img
+                    src={mssql}
+                    alt="mssql"
+                    data-tooltip-id="mssql-tooltip"
+                    data-tooltip-content="Microsoft SQL Server"
+                  />
+                  <Tooltip id="mssql-tooltip" />
+                  <img
+                    src={azureDataStudio}
+                    alt="Azure Data Studio"
+                    data-tooltip-id="azureDataStudio-tooltip"
+                    data-tooltip-content="Azure Data Studio"
+                  />
+                  <Tooltip id="azureDataStudio-tooltip" />
+                  <img
+                    src={docker}
+                    alt="docker"
+                    data-tooltip-id="docker-tooltip"
+                    data-tooltip-content="Docker"
+                  />
+                  <Tooltip id="docker-tooltip" />
+                  <img
+                    src={bootstrap}
+                    alt="bootstrap"
+                    data-tooltip-id="bootstrap-tooltip"
+                    data-tooltip-content="Bootstrap"
+                  />
+                  <Tooltip id="bootstrap-tooltip" />
+                  <img
+                    src={github}
+                    alt="github"
+                    data-tooltip-id="github-tooltip"
+                    data-tooltip-content="Github"
+                  />
+                  <Tooltip id="github-tooltip" />
                 </p>
 
                 <div className="project-button-wrapper">
@@ -315,11 +418,41 @@ export default function Projects() {
                   ))}
                 </div>
                 <p className="project-description">
-                  <img src={html} alt="html" />
-                  <img src={css} alt="css" />
-                  <img src={javascript} alt="js" />
-                  <img src={webpack} alt="webpack" />
-                  <img src={github} alt="github" />
+                  <img
+                    src={html}
+                    alt="html"
+                    data-tooltip-id="html-tooltip"
+                    data-tooltip-content="HTML"
+                  />
+                  <Tooltip id="html-tooltip" />
+                  <img
+                    src={css}
+                    alt="css"
+                    data-tooltip-id="css-tooltip"
+                    data-tooltip-content="CSS"
+                  />
+                  <Tooltip id="css-tooltip" />
+                  <img
+                    src={javascript}
+                    alt="js"
+                    data-tooltip-id="js-tooltip"
+                    data-tooltip-content="JavaScript"
+                  />
+                  <Tooltip id="js-tooltip" />
+                  <img
+                    src={webpack}
+                    alt="webpack"
+                    data-tooltip-id="webpack-tooltip"
+                    data-tooltip-content="Webpack"
+                  />
+                  <Tooltip id="webpack-tooltip" />
+                  <img
+                    src={github}
+                    alt="github"
+                    data-tooltip-id="github-tooltip"
+                    data-tooltip-content="Github"
+                  />
+                  <Tooltip id="github-tooltip" />
                 </p>
                 <div className="project-button-wrapper">
                   <a
