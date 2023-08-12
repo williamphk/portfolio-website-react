@@ -82,6 +82,10 @@ a#scroll-btn {
   margin-top: 30px;
   bottom: 0em;
   border-radius: 3em;
+  transition: transform 0.2s ease-in-out;
+}
+a#scroll-btn:hover {
+  transform: scale(1.1);
 }
 a#scroll-btn:before {
   position: absolute;

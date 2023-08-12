@@ -31,3 +31,7 @@ body {
 a {
   text-decoration: none;
 }
+
+a {
+  transition: all 0.25s ease-in-out;
+}
