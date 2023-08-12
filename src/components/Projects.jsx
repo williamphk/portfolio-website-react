@@ -35,7 +35,9 @@ export default function Projects() {
 
   const [currentVideoSrc, setCurrentVideoSrc] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isTabletPlaying, setIsTabletPlaying] = useState(false);
+  const [isTabletOnePlaying, setIsTabletOnePlaying] = useState(false);
+  const [isTabletThreePlaying, setIsTabletThreePlaying] = useState(false);
+  const [isTabletFourPlaying, setIsTabletFourPlaying] = useState(false);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(null);
 
   const videoSrcArray1 = [register, oauth, post, friend, profile];
@@ -63,7 +65,9 @@ export default function Projects() {
 
           if (entry.isIntersecting) {
             setIsPlaying(false);
-            if (isTablet) setIsTabletPlaying(false);
+            if (isTablet) setIsTabletOnePlaying(false);
+            if (isTablet) setIsTabletThreePlaying(false);
+            if (isTablet) setIsTabletFourPlaying(false);
             entry.target.parentElement.parentElement.classList.add("show");
             if (!intersectingImageArray.includes(imageID)) {
               setIntersectingImageArray([...intersectingImageArray, imageID]);
@@ -102,22 +106,24 @@ export default function Projects() {
       e.target.parentElement.className.includes("hover1")
     ) {
       src = videoSrcArray1[index];
+      if (isTablet) setIsTabletOnePlaying(true);
     } else if (
       hoverClass.includes("hover3") ||
       e.target.parentElement.className.includes("hover3")
     ) {
       src = videoSrcArray3[index];
+      if (isTablet) setIsTabletThreePlaying(true);
     } else if (
       hoverClass.includes("hover4") ||
       e.target.parentElement.className.includes("hover4")
     ) {
       src = videoSrcArray4[index];
+      if (isTablet) setIsTabletFourPlaying(true);
     }
 
     setCurrentVideoIndex(index);
     setCurrentVideoSrc(src);
     setIsPlaying(true);
-    if (isTablet) setIsTabletPlaying(true);
   };
 
   return (
@@ -132,8 +138,8 @@ export default function Projects() {
             changeVideo={changeVideo}
             isPlaying={isPlaying}
             setIsPlaying={setIsPlaying}
-            isTabletPlaying={isTabletPlaying}
-            setIsTabletPlaying={setIsTabletPlaying}
+            isTabletPlaying={isTabletOnePlaying}
+            setIsTabletPlaying={setIsTabletOnePlaying}
             currentVideoSrc={currentVideoSrc}
             tabletVideoWidth={tabletVideoWidth}
             tabletVideoHeight={tabletVideoHeight}
@@ -151,8 +157,8 @@ export default function Projects() {
             changeVideo={changeVideo}
             isPlaying={isPlaying}
             setIsPlaying={setIsPlaying}
-            isTabletPlaying={isTabletPlaying}
-            setIsTabletPlaying={setIsTabletPlaying}
+            isTabletPlaying={isTabletThreePlaying}
+            setIsTabletPlaying={setIsTabletThreePlaying}
             currentVideoSrc={currentVideoSrc}
             tabletVideoWidth={tabletVideoWidth}
             tabletVideoHeight={tabletVideoHeight}
@@ -164,7 +170,8 @@ export default function Projects() {
             changeVideo={changeVideo}
             isPlaying={isPlaying}
             setIsPlaying={setIsPlaying}
-            isTabletPlaying={isTabletPlaying}
+            isTabletPlaying={isTabletFourPlaying}
+            setIsTabletPlaying={setIsTabletFourPlaying}
             currentVideoSrc={currentVideoSrc}
             tabletVideoWidth={tabletVideoWidth}
             tabletVideoHeight={tabletVideoHeight}
