@@ -17,10 +17,11 @@ export default function ProjectOne({
   currentVideoIndex,
   changeVideo,
   isPlaying,
-  setIsPlaying,
+  isTabletPlaying,
+  setIsTabletPlaying,
   currentVideoSrc,
-  videoWidth,
-  videoHeight,
+  tabletVideoWidth,
+  tabletVideoHeight,
 }) {
   return (
     <article className="project-one">
@@ -30,13 +31,14 @@ export default function ProjectOne({
         </div>
         <div className="project-description-and-live-preview-button">
           <div className="video-wrapper"></div>
-          {isPlaying ? (
+          {isTabletPlaying ? (
             <video
               controls
-              width={videoWidth}
-              height={videoHeight}
-              style={{ display: isPlaying ? "block" : "none" }}
-              onEnded={() => setIsPlaying(false)}
+              className="video-tablet"
+              width={tabletVideoWidth}
+              height={tabletVideoHeight}
+              style={{ display: isTabletPlaying ? "block" : "none" }}
+              onEnded={() => setIsTabletPlaying(false)}
               src={currentVideoSrc}
               autoPlay
             />
@@ -47,9 +49,6 @@ export default function ProjectOne({
               alt="A screenshot of my project 1"
             />
           )}
-          <video controls className="video-tablet">
-            <source type="video/mp4" className="video-tablet-source" />
-          </video>
           <p className="project-description">
             This is a full-stack social media web application using MERN
             (MongoDB, Express.js, React, Node.js) with features such as user

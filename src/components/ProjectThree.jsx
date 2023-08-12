@@ -12,10 +12,11 @@ export default function ProjectThree({
   currentVideoIndex,
   changeVideo,
   isPlaying,
-  setIsPlaying,
+  isTabletPlaying,
+  setIsTabletPlaying,
   currentVideoSrc,
-  videoWidth,
-  videoHeight,
+  tabletVideoWidth,
+  tabletVideoHeight,
 }) {
   return (
     <article className="project-three">
@@ -24,16 +25,14 @@ export default function ProjectThree({
           <h3 className="project-title">The Battleship</h3>
         </div>
         <div className="project-description-and-live-preview-button">
-          <video controls className="video-tablet">
-            <source type="video/mp4" className="video-tablet-source" />
-          </video>
-          {isPlaying ? (
+          {isTabletPlaying ? (
             <video
               controls
-              width={videoWidth}
-              height={videoHeight}
-              style={{ display: isPlaying ? "block" : "none" }}
-              onEnded={() => setIsPlaying(false)}
+              className="video-tablet"
+              width={tabletVideoWidth}
+              height={tabletVideoHeight}
+              style={{ display: isTabletPlaying ? "block" : "none" }}
+              onEnded={() => setIsTabletPlaying(false)}
               src={currentVideoSrc}
               autoPlay
             />

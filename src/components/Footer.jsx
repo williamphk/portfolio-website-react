@@ -28,7 +28,7 @@ export default function Footer() {
           target="_blank"
           href="https://github.com/williamphk/portfolio-website"
         >
-          Source Code
+          Portfolio
         </a>
       </div>
       <div>
