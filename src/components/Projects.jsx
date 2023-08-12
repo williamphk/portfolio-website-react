@@ -35,6 +35,8 @@ export default function Projects() {
 
   const videoWidth = window.innerWidth / 2 - 40;
   const videoHeight = ((window.innerWidth / 2 - 40) * 9) / 16;
+  const tableVideoWidth = window.innerWidth;
+  const tableVideoHeight = (window.innerWidth * 9) / 16;
 
   useEffect(() => {
     const mediaQueryTablet = window.matchMedia("(max-width: 1200px)");
@@ -108,6 +110,10 @@ export default function Projects() {
             currentVideoIndex={currentVideoIndex}
             changeVideo={changeVideo}
             isPlaying={isPlaying}
+            setIsPlaying={setIsPlaying}
+            currentVideoSrc={currentVideoSrc}
+            videoWidth={tableVideoWidth}
+            videoHeight={tableVideoHeight}
           />
           <ProjectTwo
             projectTwo={projectTwo}
@@ -121,6 +127,10 @@ export default function Projects() {
             currentVideoIndex={currentVideoIndex}
             changeVideo={changeVideo}
             isPlaying={isPlaying}
+            setIsPlaying={setIsPlaying}
+            currentVideoSrc={currentVideoSrc}
+            videoWidth={tableVideoWidth}
+            videoHeight={tableVideoHeight}
           />
         </div>
         <div className="image-wrapper">

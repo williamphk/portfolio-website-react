@@ -12,6 +12,10 @@ export default function ProjectThree({
   currentVideoIndex,
   changeVideo,
   isPlaying,
+  setIsPlaying,
+  currentVideoSrc,
+  videoWidth,
+  videoHeight,
 }) {
   return (
     <article className="project-three">
@@ -23,11 +27,24 @@ export default function ProjectThree({
           <video controls className="video-tablet">
             <source type="video/mp4" className="video-tablet-source" />
           </video>
-          <img
-            className="project-image-tablet"
-            src={projectThree}
-            alt="A screenshot of my project 3"
-          />
+          {isPlaying ? (
+            <video
+              controls
+              width={videoWidth}
+              height={videoHeight}
+              style={{ display: isPlaying ? "block" : "none" }}
+              onEnded={() => setIsPlaying(false)}
+              src={currentVideoSrc}
+              autoPlay
+            />
+          ) : (
+            <img
+              className="project-image-tablet"
+              src={projectThree}
+              alt="A screenshot of my project 3"
+            />
+          )}
+
           <p className="project-description">
             This project is a dynamic adaptation of the classic board game
             Battleship using JavaScript and Webpack. It features a challenging

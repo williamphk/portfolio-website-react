@@ -17,6 +17,10 @@ export default function ProjectOne({
   currentVideoIndex,
   changeVideo,
   isPlaying,
+  setIsPlaying,
+  currentVideoSrc,
+  videoWidth,
+  videoHeight,
 }) {
   return (
     <article className="project-one">
@@ -26,11 +30,23 @@ export default function ProjectOne({
         </div>
         <div className="project-description-and-live-preview-button">
           <div className="video-wrapper"></div>
-          <img
-            className="project-image-tablet"
-            src={projectOne}
-            alt="A screenshot of my project 1"
-          />
+          {isPlaying ? (
+            <video
+              controls
+              width={videoWidth}
+              height={videoHeight}
+              style={{ display: isPlaying ? "block" : "none" }}
+              onEnded={() => setIsPlaying(false)}
+              src={currentVideoSrc}
+              autoPlay
+            />
+          ) : (
+            <img
+              className="project-image-tablet"
+              src={projectOne}
+              alt="A screenshot of my project 1"
+            />
+          )}
           <video controls className="video-tablet">
             <source type="video/mp4" className="video-tablet-source" />
           </video>
