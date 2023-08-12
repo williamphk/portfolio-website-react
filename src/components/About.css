@@ -64,6 +64,9 @@
 .icon-wrapper > a {
   color: var(--primaryColor);
   font-size: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .icon-wrapper > a:hover {
