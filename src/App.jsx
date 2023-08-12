@@ -1,9 +1,9 @@
 import "./App.css";
-import Header from "./components/Header";
-import About from "./components/about";
-import Projects from "./components/Projects";
-import Contact from "./components/contact";
-import Footer from "./components/Footer";
+import Header from "./components/Header.jsx";
+import About from "./components/about.jsx";
+import Projects from "./components/Projects.jsx";
+import Contact from "./components/contact.jsx";
+import Footer from "./components/Footer/jsx";
 
 export default function App() {
   return (

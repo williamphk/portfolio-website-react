@@ -2,9 +2,9 @@ import { useState, useEffect, useRef } from "react";
 
 import "./Projects.css";
 
-import ProjectOne from "./ProjectOne";
-import ProjectTwo from "./ProjectTwo";
-import ProjectThree from "./ProjectThree";
+import ProjectOne from "./ProjectOne.jsx";
+import ProjectTwo from "./ProjectTwo.jsx";
+import ProjectThree from "./ProjectThree.jsx";
 
 import projectOne from "../assets/project-one.webp";
 import projectTwo from "../assets/project-two.webp";
