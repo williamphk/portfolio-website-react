@@ -30,8 +30,9 @@ body {
 
 a {
   text-decoration: none;
+  transition: all 0.25s ease-in-out;
 }
 
-a {
-  transition: all 0.25s ease-in-out;
+button {
+  transition: all 0.15s ease-in-out;
 }
