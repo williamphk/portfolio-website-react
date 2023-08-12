@@ -47,10 +47,10 @@ export default function ProjectFour({
             <source type="video/mp4" className="video-tablet-source" />
           </video>
           <p className="project-description">
-            This is a full-stack social media web application using MERN
-            (MongoDB, Express.js, React, Node.js) with features such as user
-            authentication, OAuth, server-side validation, responsive design,
-            client-side management, and user customization.
+            Ingredient Mixer is a web application that assists users in
+            generating recipes based on the ingredients they have. Instead of
+            trying to figure out what to cook, let Ingredient Mixer do the
+            thinking for you!
           </p>
           <div className="intersecting-element" data-img="3"></div>
           <h4 className="project-description">Features:</h4>
