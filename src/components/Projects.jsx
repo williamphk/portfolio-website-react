@@ -1,7 +1,11 @@
 import { useState, useEffect, useRef } from "react";
-import { Tooltip } from "react-tooltip";
 
 import "./Projects.css";
+
+import ProjectOne from "./ProjectOne";
+import ProjectTwo from "./ProjectTwo";
+import ProjectThree from "./ProjectThree";
+
 import projectOne from "../assets/project-one.webp";
 import projectTwo from "../assets/project-two.webp";
 import projectThree from "../assets/project-three.webp";
@@ -14,27 +18,6 @@ import profile from "../assets/videos/Project_1/Profile.mp4";
 import drag from "../assets/videos/Project_3/Drag-n-drop.mp4";
 import click from "../assets/videos/Project_3/Click.mp4";
 import restart from "../assets/videos/Project_3/Restart.mp4";
-
-import react from "../assets/icons/react.svg";
-import node from "../assets/icons/node.svg";
-import mongoDB from "../assets/icons/mongoDB.svg";
-import express from "../assets/icons/express.svg";
-import javascript from "../assets/icons/javascript.svg";
-import html from "../assets/icons/html.svg";
-import css from "../assets/icons/css.svg";
-import tailwind from "../assets/icons/tailwind.svg";
-import passport from "../assets/icons/passport.svg";
-import redux from "../assets/icons/redux.svg";
-import axios from "../assets/icons/axios.svg";
-import aspnet from "../assets/icons/aspnet.svg";
-import csharp from "../assets/icons/csharp.svg";
-import mssql from "../assets/icons/mssql.svg";
-import webpack from "../assets/icons/webpack.svg";
-import github from "../assets/icons/github.svg";
-import bootstrap from "../assets/icons/bootstrap.svg";
-import azureDataStudio from "../assets/icons/azure-data-studio.svg";
-import azure from "../assets/icons/azure.svg";
-import docker from "../assets/icons/docker.svg";
 
 export default function Projects() {
   const [intersectingImageArray, setIntersectingImageArray] = useState([]);
@@ -119,366 +102,26 @@ export default function Projects() {
       <h2 className="section-title">Crafted with Heart</h2>
       <div className="project-wrapper">
         <div className="project" ref={observeElementsRef}>
-          <article className="project-one">
-            <div className="project-introduction hidden">
-              <div>
-                <h3 className="project-title">Odin-book</h3>
-              </div>
-              <div className="project-description-and-live-preview-button">
-                <div className="video-wrapper"></div>
-                <img
-                  className="project-image-tablet"
-                  src={projectOne}
-                  alt="A screenshot of my project 1"
-                />
-                <video controls className="video-tablet">
-                  <source type="video/mp4" className="video-tablet-source" />
-                </video>
-                <p className="project-description">
-                  This is a full-stack social media web application using MERN
-                  (MongoDB, Express.js, React, Node.js) with features such as
-                  user authentication, OAuth, server-side validation, responsive
-                  design, client-side management, and user customization.
-                </p>
-                <div className="intersecting-element" data-img="0"></div>
-                <h4 className="project-description">Features:</h4>
-                <div className="hover-wrapper1">
-                  {videoSrcArray1.map((_, index) => (
-                    <button
-                      className="hover1"
-                      onClick={(e) => changeVideo(e, index)}
-                    >
-                      {
-                        [
-                          "Register & Login",
-                          "Facebook OAuth",
-                          "Post & comment",
-                          "Friend request & Friend",
-                          "Profile",
-                        ][index]
-                      }
-                      <span className="material-symbols-outlined">
-                        {currentVideoIndex === index && isPlaying
-                          ? "stop_circle"
-                          : "play_circle"}
-                      </span>
-                    </button>
-                  ))}
-                </div>
-                <p className="project-description">
-                  <img
-                    src={node}
-                    alt="node"
-                    data-tooltip-id="node-tooltip"
-                    data-tooltip-content="Node.js"
-                  />
-                  <Tooltip id="node-tooltip" />
-                  <img
-                    src={react}
-                    alt="react"
-                    data-tooltip-id="react-tooltip"
-                    data-tooltip-content="React.js"
-                  />
-                  <Tooltip id="react-tooltip" />
-                  <img
-                    src={mongoDB}
-                    alt="mongoDB"
-                    data-tooltip-id="mongoDB-tooltip"
-                    data-tooltip-content="MongoDB"
-                  />
-                  <Tooltip id="mongoDB-tooltip" />
-                  <img
-                    src={express}
-                    alt="express"
-                    data-tooltip-id="express-tooltip"
-                    data-tooltip-content="Express.js"
-                  />
-                  <Tooltip id="express-tooltip" />
-                  <img
-                    src={passport}
-                    alt="passport"
-                    data-tooltip-id="passport-tooltip"
-                    data-tooltip-content="Passport.js"
-                  />
-                  <Tooltip id="passport-tooltip" />
-                  <img
-                    src={tailwind}
-                    alt="tailwind"
-                    data-tooltip-id="tailwind-tooltip"
-                    data-tooltip-content="Tailwind CSS"
-                  />
-                  <Tooltip id="tailwind-tooltip" />
-                  <img
-                    src={redux}
-                    alt="redux"
-                    data-tooltip-id="redux-tooltip"
-                    data-tooltip-content="Redux"
-                  />
-                  <Tooltip id="redux-tooltip" />
-                  <img
-                    src={axios}
-                    alt="axios"
-                    data-tooltip-id="axios-tooltip"
-                    data-tooltip-content="Axios"
-                  />
-                  <Tooltip id="axios-tooltip" />
-                  <img
-                    src={azure}
-                    alt="azure"
-                    data-tooltip-id="azure-tooltip"
-                    data-tooltip-content="Azure"
-                  />
-                  <Tooltip id="azure-tooltip" />
-                  <img
-                    src={github}
-                    alt="github"
-                    data-tooltip-id="github-tooltip"
-                    data-tooltip-content="Github"
-                  />
-                  <Tooltip id="github-tooltip" />
-                </p>
-                <div className="project-button-wrapper">
-                  <a
-                    href="https://github.com/williamphk/Odin-Book-frontend/"
-                    className="live-preview-button"
-                    target="_blank"
-                  >
-                    Source Code: Frontend
-                    <span className="material-symbols-outlined">
-                      open_in_new
-                    </span>
-                  </a>
-                  <a
-                    href="https://github.com/williamphk/Odin-Book-API/"
-                    className="live-preview-button"
-                    target="_blank"
-                  >
-                    Source Code: Backend
-                    <span className="material-symbols-outlined">
-                      open_in_new
-                    </span>
-                  </a>
-                  <a
-                    href="https://williamphk.github.io/Odin-Book-frontend/"
-                    className="live-preview-button"
-                    target="_blank"
-                  >
-                    Live Preview
-                    <span className="material-symbols-outlined">
-                      open_in_new
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </article>
-          <article className="project-two">
-            <div className="project-introduction hidden">
-              <div>
-                <h3 className="project-title">Hikouki Anime</h3>
-              </div>
-              <div className="project-description-and-live-preview-button">
-                <img
-                  className="project-image-tablet"
-                  src={projectTwo}
-                  alt="A screenshot of my project 2"
-                />
-                <video controls className="video-tablet">
-                  <source type="video/mp4" className="video-tablet-source" />
-                </video>
-                <p className="project-description">
-                  A review platform for anime enthusiasts built with ASP.NET MVC
-                  and Entity framework. This web application allows users to
-                  browse animes, post their own reviews and read reviews posted
-                  by others.
-                </p>
-                <div className="intersecting-element" data-img="1"></div>
-                <p className="project-description">
-                  The application supports comprehensive CRUD operations across
-                  three interconnected tables, including 1-to-many and
-                  many-to-many relationships. Implemented extra features such as
-                  user-specific review editing and image uploading.
-                </p>
-                <p className="project-description">
-                  <img
-                    src={aspnet}
-                    alt="aspnet"
-                    data-tooltip-id="aspnet-tooltip"
-                    data-tooltip-content="ASP.NET MVC"
-                  />
-                  <Tooltip id="aspnet-tooltip" />
-                  <img
-                    src={csharp}
-                    alt="csharp"
-                    data-tooltip-id="csharp-tooltip"
-                    data-tooltip-content="C#"
-                  />
-                  <Tooltip id="csharp-tooltip" />
-                  <img
-                    src={mssql}
-                    alt="mssql"
-                    data-tooltip-id="mssql-tooltip"
-                    data-tooltip-content="Microsoft SQL Server"
-                  />
-                  <Tooltip id="mssql-tooltip" />
-                  <img
-                    src={azureDataStudio}
-                    alt="Azure Data Studio"
-                    data-tooltip-id="azureDataStudio-tooltip"
-                    data-tooltip-content="Azure Data Studio"
-                  />
-                  <Tooltip id="azureDataStudio-tooltip" />
-                  <img
-                    src={docker}
-                    alt="docker"
-                    data-tooltip-id="docker-tooltip"
-                    data-tooltip-content="Docker"
-                  />
-                  <Tooltip id="docker-tooltip" />
-                  <img
-                    src={bootstrap}
-                    alt="bootstrap"
-                    data-tooltip-id="bootstrap-tooltip"
-                    data-tooltip-content="Bootstrap"
-                  />
-                  <Tooltip id="bootstrap-tooltip" />
-                  <img
-                    src={github}
-                    alt="github"
-                    data-tooltip-id="github-tooltip"
-                    data-tooltip-content="Github"
-                  />
-                  <Tooltip id="github-tooltip" />
-                </p>
-
-                <div className="project-button-wrapper">
-                  <a
-                    href="https://github.com/williamphk/Passion_Project/"
-                    className="live-preview-button"
-                    target="_blank"
-                  >
-                    Source Code
-                    <span className="material-symbols-outlined">
-                      open_in_new
-                    </span>
-                  </a>
-                  <a
-                    href="https://www.youtube.com/watch?v=tX8cEEDMW7o"
-                    className="live-preview-button"
-                    target="_blank"
-                  >
-                    Demonstration
-                    <span className="material-symbols-outlined">
-                      open_in_new
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </article>
-          <article className="project-three">
-            <div className="project-introduction hidden">
-              <div>
-                <h3 className="project-title">The Battleship</h3>
-              </div>
-              <div className="project-description-and-live-preview-button">
-                <video controls className="video-tablet">
-                  <source type="video/mp4" className="video-tablet-source" />
-                </video>
-                <img
-                  className="project-image-tablet"
-                  src={projectThree}
-                  alt="A screenshot of my project 3"
-                />
-                <p className="project-description">
-                  This project is a dynamic adaptation of the classic board game
-                  Battleship using JavaScript and Webpack. It features a
-                  challenging bot that built with an algorithm to recalculate
-                  the probability density on each move.
-                </p>
-                <div className="intersecting-element" data-img="2"></div>
-                <h4 className="project-description">Features:</h4>
-                <div className="hover-wrapper3">
-                  {videoSrcArray3.map((_, index) => (
-                    <button
-                      className="hover3"
-                      onClick={(e) => changeVideo(e, index)}
-                    >
-                      {
-                        ["Drag & drop", "Click to hit the ships", "Restart"][
-                          index
-                        ]
-                      }
-                      <span className="material-symbols-outlined">
-                        {currentVideoIndex === index && isPlaying
-                          ? "stop_circle"
-                          : "play_circle"}
-                      </span>
-                    </button>
-                  ))}
-                </div>
-                <p className="project-description">
-                  <img
-                    src={html}
-                    alt="html"
-                    data-tooltip-id="html-tooltip"
-                    data-tooltip-content="HTML"
-                  />
-                  <Tooltip id="html-tooltip" />
-                  <img
-                    src={css}
-                    alt="css"
-                    data-tooltip-id="css-tooltip"
-                    data-tooltip-content="CSS"
-                  />
-                  <Tooltip id="css-tooltip" />
-                  <img
-                    src={javascript}
-                    alt="js"
-                    data-tooltip-id="js-tooltip"
-                    data-tooltip-content="JavaScript"
-                  />
-                  <Tooltip id="js-tooltip" />
-                  <img
-                    src={webpack}
-                    alt="webpack"
-                    data-tooltip-id="webpack-tooltip"
-                    data-tooltip-content="Webpack"
-                  />
-                  <Tooltip id="webpack-tooltip" />
-                  <img
-                    src={github}
-                    alt="github"
-                    data-tooltip-id="github-tooltip"
-                    data-tooltip-content="Github"
-                  />
-                  <Tooltip id="github-tooltip" />
-                </p>
-                <div className="project-button-wrapper">
-                  <a
-                    href="https://github.com/williamphk/odin_Battleship/"
-                    className="live-preview-button"
-                    target="_blank"
-                  >
-                    Source Code
-                    <span className="material-symbols-outlined">
-                      open_in_new
-                    </span>
-                  </a>
-                  <a
-                    href="https://williamphk.github.io/odin_Battleship/"
-                    className="live-preview-button"
-                    target="_blank"
-                  >
-                    Live Preview
-                    <span className="material-symbols-outlined">
-                      open_in_new
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </article>
+          <ProjectOne
+            projectOne={projectOne}
+            videoSrcArray1={videoSrcArray1}
+            currentVideoIndex={currentVideoIndex}
+            changeVideo={changeVideo}
+            isPlaying={isPlaying}
+          />
+          <ProjectTwo
+            projectTwo={projectTwo}
+            currentVideoIndex={currentVideoIndex}
+            changeVideo={changeVideo}
+            isPlaying={isPlaying}
+          />
+          <ProjectThree
+            projectThree={projectThree}
+            videoSrcArray3={videoSrcArray3}
+            currentVideoIndex={currentVideoIndex}
+            changeVideo={changeVideo}
+            isPlaying={isPlaying}
+          />
         </div>
         <div className="image-wrapper">
           {isPlaying ? (
@@ -501,6 +144,7 @@ export default function Projects() {
                   style={{
                     display: currentImageIndex == index ? "block" : "none",
                   }}
+                  key={index}
                 />
               ))}
             </div>
