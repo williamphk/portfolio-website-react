@@ -163,18 +163,17 @@
     margin-top: 0;
     margin-bottom: 0;
   }
-  .project-one .project-image {
-    display: none;
-  }
-  .project-two .project-image {
-    display: none;
-  }
-  .project-three .project-image {
+
+  .project-one .project-image,
+  .project-two .project-image,
+  .project-three .project-image,
+  .project-four .project-image {
     display: none;
   }
   .project-one,
   .project-two,
-  .project-three {
+  .project-three,
+  .project-four {
     width: min(689px, 100%);
     padding: 2em 0;
   }
@@ -251,7 +250,8 @@
   }
   .project-one,
   .project-two,
-  .project-three {
+  .project-three,
+  .project-four {
     width: auto;
     height: auto;
     background-size: auto;
@@ -267,8 +267,7 @@
     font-size: var(--bodyFontPhone);
     padding: 10px;
   }
-  .hover1,
-  .hover3 {
+  .hover {
     margin: 0 7px;
     padding: 12px;
   }
