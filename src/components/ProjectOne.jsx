@@ -57,10 +57,10 @@ export default function ProjectOne({
           </p>
           <div className="intersecting-element" data-img="0"></div>
           <h4 className="project-description">Features:</h4>
-          <div className="hover-wrapper1">
+          <div className="hover-wrapper">
             {videoSrcArray1.map((_, index) => (
               <button
-                className="hover1"
+                className="hover1 hover"
                 onClick={(e) => changeVideo(e, index)}
                 key={index}
               >

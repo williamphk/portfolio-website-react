@@ -12,11 +12,11 @@ export default function ProjectFour({
   currentVideoIndex,
   changeVideo,
   isPlaying,
-  setIsPlaying,
   isTabletPlaying,
+  setIsTabletPlaying,
   currentVideoSrc,
-  videoWidth,
-  videoHeight,
+  tabletVideoWidth,
+  tabletVideoHeight,
 }) {
   return (
     <article className="project-four">
@@ -26,13 +26,13 @@ export default function ProjectFour({
         </div>
         <div className="project-description-and-live-preview-button">
           <div className="video-wrapper"></div>
-          {/* {isPlaying ? (
+          {isTabletPlaying ? (
             <video
               controls
-              width={videoWidth}
-              height={videoHeight}
-              style={{ display: isPlaying ? "block" : "none" }}
-              onEnded={() => setIsPlaying(false)}
+              width={tabletVideoWidth}
+              height={tabletVideoHeight}
+              style={{ display: isTabletPlaying ? "block" : "none" }}
+              onEnded={() => setIsTabletPlaying(false)}
               src={currentVideoSrc}
               autoPlay
             />
@@ -42,7 +42,7 @@ export default function ProjectFour({
               src={projectFour}
               alt="A screenshot of my project 4"
             />
-          )} */}
+          )}
           <video controls className="video-tablet">
             <source type="video/mp4" className="video-tablet-source" />
           </video>
@@ -52,12 +52,12 @@ export default function ProjectFour({
             authentication, OAuth, server-side validation, responsive design,
             client-side management, and user customization.
           </p>
-          <div className="intersecting-element" data-img="0"></div>
+          <div className="intersecting-element" data-img="3"></div>
           <h4 className="project-description">Features:</h4>
-          <div className="hover-wrapper4">
+          <div className="hover-wrapper">
             {videoSrcArray4.map((_, index) => (
               <button
-                className="hover4"
+                className="hover4 hover"
                 onClick={(e) => changeVideo(e, index)}
                 key={index}
               >

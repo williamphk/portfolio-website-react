@@ -52,10 +52,10 @@ export default function ProjectThree({
           </p>
           <div className="intersecting-element" data-img="2"></div>
           <h4 className="project-description">Features:</h4>
-          <div className="hover-wrapper3">
+          <div className="hover-wrapper">
             {videoSrcArray3.map((_, index) => (
               <button
-                className="hover3"
+                className="hover3 hover"
                 onClick={(e) => changeVideo(e, index)}
                 key={index}
               >

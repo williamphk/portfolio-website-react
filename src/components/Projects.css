@@ -105,16 +105,14 @@
   gap: 25px;
 }
 
-.hover-wrapper1,
-.hover-wrapper3 {
+.hover-wrapper {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
   gap: 5px;
   width: 100%;
 }
-.hover1,
-.hover3 {
+.hover {
   padding: 15px;
   background-color: #ececec;
   border-radius: 10px;
@@ -126,12 +124,10 @@
   font-family: inherit;
   font-size: inherit;
 }
-.hover1 > span,
-.hover3 > span {
+.hover > span {
   font-size: 30px;
 }
-.hover1:hover,
-.hover3:hover {
+.hover:hover {
   background-color: #d1d1d1;
 }
 .video-tablet {

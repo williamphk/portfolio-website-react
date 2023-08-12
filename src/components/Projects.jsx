@@ -31,7 +31,7 @@ export default function Projects() {
   const [currentImageIndex, setCurrentImageIndex] = useState(null);
   const [isTablet, setIsTablet] = useState(false);
 
-  const imageArray = [projectOne, projectTwo, projectThree];
+  const imageArray = [projectOne, projectTwo, projectThree, projectFour];
 
   const [currentVideoSrc, setCurrentVideoSrc] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -107,6 +107,11 @@ export default function Projects() {
       e.target.parentElement.className.includes("hover3")
     ) {
       src = videoSrcArray3[index];
+    } else if (
+      hoverClass.includes("hover4") ||
+      e.target.parentElement.className.includes("hover4")
+    ) {
+      src = videoSrcArray4[index];
     }
 
     setCurrentVideoIndex(index);
@@ -152,7 +157,7 @@ export default function Projects() {
             tabletVideoWidth={tabletVideoWidth}
             tabletVideoHeight={tabletVideoHeight}
           />
-          {/* <ProjectFour
+          <ProjectFour
             projectFour={projectFour}
             videoSrcArray4={videoSrcArray4}
             currentVideoIndex={currentVideoIndex}
@@ -161,9 +166,9 @@ export default function Projects() {
             setIsPlaying={setIsPlaying}
             isTabletPlaying={isTabletPlaying}
             currentVideoSrc={currentVideoSrc}
-            tabletVideoWidth={tableVideoWidth}
-            tabletVideoHeight={tableVideoHeight}
-          /> */}
+            tabletVideoWidth={tabletVideoWidth}
+            tabletVideoHeight={tabletVideoHeight}
+          />
         </div>
         {isTablet ? (
           <></>
