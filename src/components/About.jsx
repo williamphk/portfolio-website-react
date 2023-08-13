@@ -28,11 +28,12 @@ export default function About() {
       <h1 className="my-name">{name}</h1>
       <h2 className="job-title">{jobTitle}</h2>
       <p className="self-introduction">
-        I'm specializing in React, Node, and ASP.NET, and fueled by a passion
-        for turning imaginative ideas into user-friendly applications. My aim is
-        to create engaging web experiences that are not only functional but also
-        bring joy to users. I love working in collaborative environments, as it
-        allows me to learn and grow in ideas. Welcome to my portfolio!
+        I'm specializing in React, Node, ASP.NET and Laravel, and fueled by a
+        passion for turning imaginative ideas into user-friendly applications.
+        My aim is to create engaging web experiences that are not only
+        functional but also bring joy to users. I love working in collaborative
+        environments, as it allows me to learn and grow in ideas. Welcome to my
+        portfolio!
       </p>
       <div className="icon-wrapper">
         <a href="https://www.linkedin.com/in/williamphk/" target="_blank">
