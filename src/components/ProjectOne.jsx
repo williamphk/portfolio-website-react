@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Tooltip } from "react-tooltip";
 
 import react from "../assets/icons/react.svg";
@@ -23,11 +24,31 @@ export default function ProjectOne({
   tabletVideoWidth,
   tabletVideoHeight,
 }) {
+  const [projectName, setProjectName] = useState("");
+  const [blurb, setBlurb] = useState("");
+  const [liveURL, setLiveURL] = useState("");
+  const [githubFrontEndURL, setGithubFrontEndURL] = useState("");
+  const [githubBackEndURL, setGithubBackEndURL] = useState("");
+
+  useEffect(() => {
+    const getProject = async () => {
+      const response = await fetch("../../../public/project.json");
+      const data = await response.json();
+
+      setProjectName(data[0].projectName);
+      setBlurb(data[0].blurb);
+      setLiveURL(data[0].liveURL);
+      setGithubFrontEndURL(data[0].githubFrontEndURL);
+      setGithubBackEndURL(data[0].githubBackEndURL);
+    };
+    getProject();
+  }, []);
+
   return (
     <article className="project-one">
       <div className="project-introduction hidden">
         <div>
-          <h3 className="project-title">Odin-book</h3>
+          <h3 className="project-title">{projectName}</h3>
         </div>
         <div className="project-description-and-live-preview-button">
           <div className="video-wrapper"></div>
@@ -49,14 +70,7 @@ export default function ProjectOne({
               alt="A screenshot of my project 1"
             />
           )}
-          <p className="project-description">
-            Odin-book is more than just a social media platform; it's a seamless
-            journey crafted with the MERN stack (MongoDB, Express.js, React,
-            Node.js). With responsive design and personalized user customization
-            features, Odin-book sets the stage for a new era of online
-            interaction. Dive in, and let Odin-book redefine your social media
-            experience.
-          </p>
+          <p className="project-description">{blurb}</p>
           <div className="intersecting-element" data-img="0"></div>
           <h4 className="project-description">Features:</h4>
           <div className="hover-wrapper">
@@ -157,7 +171,7 @@ export default function ProjectOne({
           </p>
           <div className="project-button-wrapper">
             <a
-              href="https://github.com/williamphk/Odin-Book-frontend/"
+              href={githubFrontEndURL}
               className="live-preview-button"
               target="_blank"
             >
@@ -165,18 +179,14 @@ export default function ProjectOne({
               <span className="material-symbols-outlined">open_in_new</span>
             </a>
             <a
-              href="https://github.com/williamphk/Odin-Book-API/"
+              href={githubBackEndURL}
               className="live-preview-button"
               target="_blank"
             >
               Source Code: Backend
               <span className="material-symbols-outlined">open_in_new</span>
             </a>
-            <a
-              href="https://williamphk.github.io/Odin-Book-frontend/"
-              className="live-preview-button"
-              target="_blank"
-            >
+            <a href={liveURL} className="live-preview-button" target="_blank">
               Live Preview
               <span className="material-symbols-outlined">open_in_new</span>
             </a>

@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Tooltip } from "react-tooltip";
 
 import aspnet from "../assets/icons/aspnet.svg";
@@ -9,11 +10,31 @@ import azureDataStudio from "../assets/icons/azure-data-studio.svg";
 import docker from "../assets/icons/docker.svg";
 
 export default function ProjectTwo({ projectTwo }) {
+  const [projectName, setProjectName] = useState("");
+  const [blurb1, setBlurb1] = useState("");
+  const [blurb2, setBlurb2] = useState("");
+  const [liveURL, setLiveURL] = useState("");
+  const [githubURL, setGithubURL] = useState("");
+
+  useEffect(() => {
+    const getProject = async () => {
+      const response = await fetch("../../../public/project.json");
+      const data = await response.json();
+
+      setProjectName(data[1].projectName);
+      setBlurb1(data[1].blurb[0]);
+      setBlurb2(data[1].blurb[1]);
+      setLiveURL(data[1].liveURL);
+      setGithubURL(data[1].githubURL);
+    };
+    getProject();
+  }, []);
+
   return (
     <article className="project-two">
       <div className="project-introduction hidden">
         <div>
-          <h3 className="project-title">Hikouki Anime</h3>
+          <h3 className="project-title">{projectName}</h3>
         </div>
         <div className="project-description-and-live-preview-button">
           <img
@@ -24,22 +45,9 @@ export default function ProjectTwo({ projectTwo }) {
           <video controls className="video-tablet">
             <source type="video/mp4" className="video-tablet-source" />
           </video>
-          <p className="project-description">
-            Hikouki Anime Hub is a destination for anime enthusiasts, crafted
-            using ASP.NET MVC and Entity Framework. Instead of searching
-            aimlessly for anime reviews, let Hikouki Anime Hub be your guide!
-            This web application offers a comprehensive platform where users can
-            browse anime titles, share their own insights, and explore reviews
-            posted by others.
-          </p>
+          <p className="project-description">{blurb1}</p>
           <div className="intersecting-element" data-img="1"></div>
-          <p className="project-description">
-            The system is designed with meticulous CRUD operations across three
-            interconnected tables, facilitating 1-to-many and many-to-many
-            relationships. Tailored features such as user-specific review
-            editing and image uploading elevate the experience, making Hikouki
-            Anime Hub a must-visit for every anime fan.
-          </p>
+          <p className="project-description">{blurb2}</p>
           <p className="project-description">
             <img
               src={aspnet}
@@ -93,19 +101,11 @@ export default function ProjectTwo({ projectTwo }) {
           </p>
 
           <div className="project-button-wrapper">
-            <a
-              href="https://github.com/williamphk/Passion_Project/"
-              className="live-preview-button"
-              target="_blank"
-            >
+            <a href={githubURL} className="live-preview-button" target="_blank">
               Source Code
               <span className="material-symbols-outlined">open_in_new</span>
             </a>
-            <a
-              href="https://www.youtube.com/watch?v=tX8cEEDMW7o"
-              className="live-preview-button"
-              target="_blank"
-            >
+            <a href={liveURL} className="live-preview-button" target="_blank">
               Demonstration
               <span className="material-symbols-outlined">open_in_new</span>
             </a>

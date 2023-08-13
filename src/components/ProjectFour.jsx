@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Tooltip } from "react-tooltip";
 
 import node from "../assets/icons/node.svg";
@@ -18,11 +19,29 @@ export default function ProjectFour({
   tabletVideoWidth,
   tabletVideoHeight,
 }) {
+  const [projectName, setProjectName] = useState("");
+  const [blurb, setBlurb] = useState("");
+  const [liveURL, setLiveURL] = useState("");
+  const [githubURL, setGithubURL] = useState("");
+
+  useEffect(() => {
+    const getProject = async () => {
+      const response = await fetch("../../../public/project.json");
+      const data = await response.json();
+
+      setProjectName(data[3].projectName);
+      setBlurb(data[3].blurb);
+      setLiveURL(data[3].liveURL);
+      setGithubURL(data[3].githubURL);
+    };
+    getProject();
+  }, []);
+
   return (
     <article className="project-four">
       <div className="project-introduction hidden">
         <div>
-          <h3 className="project-title">Ingredient Mixer</h3>
+          <h3 className="project-title">{projectName}</h3>
         </div>
         <div className="project-description-and-live-preview-button">
           <div className="video-wrapper"></div>
@@ -46,12 +65,7 @@ export default function ProjectFour({
           <video controls className="video-tablet">
             <source type="video/mp4" className="video-tablet-source" />
           </video>
-          <p className="project-description">
-            Ingredient Mixer is a web application that assists users in
-            generating recipes based on the ingredients they have. Instead of
-            trying to figure out what to cook, let Ingredient Mixer do the
-            thinking for you!
-          </p>
+          <p className="project-description">{blurb}</p>
           <div className="intersecting-element" data-img="3"></div>
           <h4 className="project-description">Features:</h4>
           <div className="hover-wrapper">
@@ -108,19 +122,11 @@ export default function ProjectFour({
             <Tooltip id="github-tooltip" />
           </p>
           <div className="project-button-wrapper">
-            <a
-              href="https://github.com/williamphk/DiscountDish/"
-              className="live-preview-button"
-              target="_blank"
-            >
+            <a href={githubURL} className="live-preview-button" target="_blank">
               Source Code
               <span className="material-symbols-outlined">open_in_new</span>
             </a>
-            <a
-              href="http://recipe.williamphk.com/"
-              className="live-preview-button"
-              target="_blank"
-            >
+            <a href={liveURL} className="live-preview-button" target="_blank">
               Live Preview
               <span className="material-symbols-outlined">open_in_new</span>
             </a>

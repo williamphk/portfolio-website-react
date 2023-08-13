@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Tooltip } from "react-tooltip";
 
 import javascript from "../assets/icons/javascript.svg";
@@ -18,11 +19,29 @@ export default function ProjectThree({
   tabletVideoWidth,
   tabletVideoHeight,
 }) {
+  const [projectName, setProjectName] = useState("");
+  const [blurb, setBlurb] = useState("");
+  const [liveURL, setLiveURL] = useState("");
+  const [githubURL, setGithubURL] = useState("");
+
+  useEffect(() => {
+    const getProject = async () => {
+      const response = await fetch("../../../public/project.json");
+      const data = await response.json();
+
+      setProjectName(data[2].projectName);
+      setBlurb(data[2].blurb);
+      setLiveURL(data[2].liveURL);
+      setGithubURL(data[2].githubURL);
+    };
+    getProject();
+  }, []);
+
   return (
     <article className="project-three">
       <div className="project-introduction hidden">
         <div>
-          <h3 className="project-title">The Battleship</h3>
+          <h3 className="project-title">{projectName}</h3>
         </div>
         <div className="project-description-and-live-preview-button">
           {isTabletPlaying ? (
@@ -44,14 +63,7 @@ export default function ProjectThree({
             />
           )}
 
-          <p className="project-description">
-            The Battleship is a dynamic web game that brings the classic board
-            game Battleship to life using JavaScript and Webpack. Instead of
-            facing a predictable opponent, engage with a challenging bot built
-            with a unique algorithm that recalculates the probability density
-            after each move. Let The Battleship put your naval tactics to the
-            test!
-          </p>
+          <p className="project-description">{blurb}</p>
           <div className="intersecting-element" data-img="2"></div>
           <h4 className="project-description">Features:</h4>
           <div className="hover-wrapper">
@@ -108,19 +120,11 @@ export default function ProjectThree({
             <Tooltip id="github-tooltip" />
           </p>
           <div className="project-button-wrapper">
-            <a
-              href="https://github.com/williamphk/odin_Battleship/"
-              className="live-preview-button"
-              target="_blank"
-            >
+            <a href={githubURL} className="live-preview-button" target="_blank">
               Source Code
               <span className="material-symbols-outlined">open_in_new</span>
             </a>
-            <a
-              href="https://williamphk.github.io/odin_Battleship/"
-              className="live-preview-button"
-              target="_blank"
-            >
+            <a href={liveURL} className="live-preview-button" target="_blank">
               Live Preview
               <span className="material-symbols-outlined">open_in_new</span>
             </a>
