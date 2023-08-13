@@ -21,7 +21,7 @@
 
 .profile-pic {
   position: absolute;
-  right: 8%;
+  left: 84%;
   top: 6.5%;
   width: 200px;
   height: 200px;
@@ -194,6 +194,10 @@ a#scroll-btn:after {
   .self-introduction {
     font-size: var(--bodyFontPhone);
     padding: 0 3%;
+  }
+  .profile-pic {
+    width: 150px;
+    height: 150px;
   }
   .about-section-button {
     display: none;
