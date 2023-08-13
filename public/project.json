@@ -25,7 +25,7 @@
         "liveURL":"http://recipe.williamphk.com/"
     },
     {
-        "projectName":"Easy Portofolio",
+        "projectName":"Easy Portfolio",
         "blurb": "Easy Portfolio is a web platform CMS built by PHP and Laravel designed to help professionals showcase their work effortlessly. Instead of updating the code for your portfolio site manually, let Easy Portfolio manage the content for you! After you have updated the content, the changes will be reflected on your portfolio site immediately through the magic of Laravel API and JSON.",
         "githubURL":"https://github.com/williamphk/portfolio-laravel-API/",
         "liveURL":"http://3.145.155.140/"
