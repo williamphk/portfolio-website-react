@@ -7,7 +7,7 @@ export default function Contact() {
 
   useEffect(() => {
     const getContact = async () => {
-      const response = await fetch("../../../public/contact.json");
+      const response = await fetch("/contact.json");
       const data = await response.json();
       setEmail(data.email);
       setLinkedIn(data.linkedIn);

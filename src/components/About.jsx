@@ -7,7 +7,7 @@ export default function About() {
 
   useEffect(() => {
     const getAbout = async () => {
-      const response = await fetch("../../../public/about.json");
+      const response = await fetch("/about.json");
       const data = await response.json();
       setName(data.name);
       setJobTitle(data.jobTitle);

@@ -26,7 +26,7 @@ export default function ProjectThree({
 
   useEffect(() => {
     const getProject = async () => {
-      const response = await fetch("../../../public/project.json");
+      const response = await fetch("/project.json");
       const data = await response.json();
 
       setProjectName(data[2].projectName);
