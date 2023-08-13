@@ -50,6 +50,7 @@ export default function About() {
       </div>
       <a href="#work" className="about-section-button">
         Check out my works!
+        <div className="button__shadow"></div>
       </a>
       <a
         id="scroll-btn"
