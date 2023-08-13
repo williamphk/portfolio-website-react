@@ -1,11 +1,25 @@
+import { useEffect, useState } from "react";
 import "./About.css";
 
 export default function About() {
+  const [name, setName] = useState("");
+  const [jobTitle, setJobTitle] = useState("");
+
+  useEffect(() => {
+    const getAbout = async () => {
+      const response = await fetch("../../../public/about.json");
+      const data = await response.json();
+      setName(data.name);
+      setJobTitle(data.jobTitle);
+    };
+    getAbout();
+  }, []);
+
   return (
     <section className="about" id="about">
       <p className="self-introduction">Hi! My name is</p>
-      <h1 className="my-name">William Poon</h1>
-      <h2 className="job-title">Full Stack Developer</h2>
+      <h1 className="my-name">{name}</h1>
+      <h2 className="job-title">{jobTitle}</h2>
       <p className="self-introduction">
         I'm specializing in React, Node, and ASP.NET, and fueled by a passion
         for turning imaginative ideas into user-friendly applications. My aim is
