@@ -25,16 +25,20 @@ export default function ProjectTwo({ projectTwo }) {
             <source type="video/mp4" className="video-tablet-source" />
           </video>
           <p className="project-description">
-            A review platform for anime enthusiasts built with ASP.NET MVC and
-            Entity framework. This web application allows users to browse
-            animes, post their own reviews and read reviews posted by others.
+            Hikouki Anime Hub is a destination for anime enthusiasts, crafted
+            using ASP.NET MVC and Entity Framework. Instead of searching
+            aimlessly for anime reviews, let Hikouki Anime Hub be your guide!
+            This web application offers a comprehensive platform where users can
+            browse anime titles, share their own insights, and explore reviews
+            posted by others.
           </p>
           <div className="intersecting-element" data-img="1"></div>
           <p className="project-description">
-            The application supports comprehensive CRUD operations across three
-            interconnected tables, including 1-to-many and many-to-many
-            relationships. Implemented extra features such as user-specific
-            review editing and image uploading.
+            The system is designed with meticulous CRUD operations across three
+            interconnected tables, facilitating 1-to-many and many-to-many
+            relationships. Tailored features such as user-specific review
+            editing and image uploading elevate the experience, making Hikouki
+            Anime Hub a must-visit for every anime fan.
           </p>
           <p className="project-description">
             <img

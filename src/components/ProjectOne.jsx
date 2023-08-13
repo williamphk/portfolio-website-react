@@ -50,10 +50,12 @@ export default function ProjectOne({
             />
           )}
           <p className="project-description">
-            This is a full-stack social media web application using MERN
-            (MongoDB, Express.js, React, Node.js) with features such as user
-            authentication, OAuth, server-side validation, responsive design,
-            client-side management, and user customization.
+            Odin-book is more than just a social media platform; it's a seamless
+            journey crafted with the MERN stack (MongoDB, Express.js, React,
+            Node.js). With responsive design and personalized user customization
+            features, Odin-book sets the stage for a new era of online
+            interaction. Dive in, and let Odin-book redefine your social media
+            experience.
           </p>
           <div className="intersecting-element" data-img="0"></div>
           <h4 className="project-description">Features:</h4>

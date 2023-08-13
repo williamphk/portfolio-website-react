@@ -45,10 +45,12 @@ export default function ProjectThree({
           )}
 
           <p className="project-description">
-            This project is a dynamic adaptation of the classic board game
-            Battleship using JavaScript and Webpack. It features a challenging
-            bot that built with an algorithm to recalculate the probability
-            density on each move.
+            The Battleship is a dynamic web game that brings the classic board
+            game Battleship to life using JavaScript and Webpack. Instead of
+            facing a predictable opponent, engage with a challenging bot built
+            with a unique algorithm that recalculates the probability density
+            after each move. Let The Battleship put your naval tactics to the
+            test!
           </p>
           <div className="intersecting-element" data-img="2"></div>
           <h4 className="project-description">Features:</h4>
