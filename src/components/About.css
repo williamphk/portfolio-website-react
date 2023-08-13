@@ -19,6 +19,17 @@
   padding: 0 30%;
 }
 
+.profile-pic {
+  position: absolute;
+  right: 8%;
+  top: 8%;
+  width: 200px;
+  height: 200px;
+  border-radius: 25px;
+  margin-top: 20px;
+  border: 5px solid var(--tertiaryColor);
+}
+
 .my-name {
   color: var(--primaryColor);
   font-size: 120px;

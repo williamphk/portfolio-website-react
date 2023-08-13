@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import "./About.css";
 
+import profilePic from "../assets/profile-pic.jpg";
+
 export default function About() {
   const [name, setName] = useState("");
   const [jobTitle, setJobTitle] = useState("");
@@ -18,6 +20,11 @@ export default function About() {
   return (
     <section className="about" id="about">
       <p className="self-introduction">Hi! My name is</p>
+      <img
+        src={profilePic}
+        alt="William's profile pic"
+        className="profile-pic"
+      />
       <h1 className="my-name">{name}</h1>
       <h2 className="job-title">{jobTitle}</h2>
       <p className="self-introduction">
@@ -42,7 +49,7 @@ export default function About() {
         </a>
       </div>
       <a href="#work" className="about-section-button">
-        Check out my work!
+        Check out my works!
       </a>
       <a
         id="scroll-btn"
