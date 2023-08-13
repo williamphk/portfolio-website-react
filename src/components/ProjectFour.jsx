@@ -6,6 +6,7 @@ import express from "../assets/icons/express.svg";
 import github from "../assets/icons/github.svg";
 import pug from "../assets/icons/pug.svg";
 import aws from "../assets/icons/aws.svg";
+import plam2 from "../assets/icons/plam2.svg";
 
 export default function ProjectFour({
   projectFour,
@@ -106,6 +107,13 @@ export default function ProjectFour({
               data-tooltip-content="Pug.js"
             />
             <Tooltip id="pug-tooltip" />
+            <img
+              src={plam2}
+              alt="Pathways Language Model"
+              data-tooltip-id="plam2-tooltip"
+              data-tooltip-content="Pathways Language Model by Google AI"
+            />
+            <Tooltip id="plam2-tooltip" />
             <img
               src={aws}
               alt="Amazon Web Services"
