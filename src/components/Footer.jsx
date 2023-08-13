@@ -31,13 +31,13 @@ export default function Footer() {
           target="_blank"
           href="https://github.com/williamphk/portfolio-laravel-API/"
         >
-          Portofolio CMS
+          Easy Portofolio
         </a>
         <a
           target="_blank"
           href="https://github.com/williamphk/portfolio-website/"
         >
-          Portfolio
+          Portfolio Website
         </a>
       </div>
       <div>
