@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 import { Tooltip } from "react-tooltip";
 
-import react from "../assets/icons/react.svg";
-import node from "../assets/icons/node.svg";
-import mongoDB from "../assets/icons/mongoDB.svg";
-import express from "../assets/icons/express.svg";
-import tailwind from "../assets/icons/tailwind.svg";
-import passport from "../assets/icons/passport.svg";
-import redux from "../assets/icons/redux.svg";
-import axios from "../assets/icons/axios.svg";
-import azure from "../assets/icons/azure.svg";
-import github from "../assets/icons/github.svg";
+import react from "../../assets/icons/react.svg";
+import node from "../../assets/icons/node.svg";
+import mongoDB from "../../assets/icons/mongoDB.svg";
+import express from "../../assets/icons/express.svg";
+import tailwind from "../../assets/icons/tailwind.svg";
+import passport from "../../assets/icons/passport.svg";
+import redux from "../../assets/icons/redux.svg";
+import axios from "../../assets/icons/axios.svg";
+import azure from "../../assets/icons/azure.svg";
+import github from "../../assets/icons/github.svg";
 
 export default function ProjectOne({
   projectOne,

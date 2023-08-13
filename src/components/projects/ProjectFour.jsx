@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
 import { Tooltip } from "react-tooltip";
 
-import javascript from "../assets/icons/javascript.svg";
-import html from "../assets/icons/html.svg";
-import css from "../assets/icons/css.svg";
-import webpack from "../assets/icons/webpack.svg";
-import github from "../assets/icons/github.svg";
+import node from "../../assets/icons/node.svg";
+import express from "../../assets/icons/express.svg";
+import github from "../../assets/icons/github.svg";
+import pug from "../../assets/icons/pug.svg";
+import aws from "../../assets/icons/aws.svg";
+import palm2 from "../../assets/icons/palm2.svg";
 
-export default function ProjectThree({
-  projectThree,
-  videoSrcArray3,
+export default function ProjectFour({
+  projectFour,
+  videoSrcArray4,
   currentVideoIndex,
   changeVideo,
   isPlaying,
@@ -29,25 +30,25 @@ export default function ProjectThree({
       const response = await fetch("/project.json");
       const data = await response.json();
 
-      setProjectName(data[2].projectName);
-      setBlurb(data[2].blurb);
-      setLiveURL(data[2].liveURL);
-      setGithubURL(data[2].githubURL);
+      setProjectName(data[3].projectName);
+      setBlurb(data[3].blurb);
+      setLiveURL(data[3].liveURL);
+      setGithubURL(data[3].githubURL);
     };
     getProject();
   }, []);
 
   return (
-    <article className="project-three">
+    <article className="project-four">
       <div className="project-introduction hidden">
         <div>
           <h3 className="project-title">{projectName}</h3>
         </div>
         <div className="project-description-and-live-preview-button">
+          <div className="video-wrapper"></div>
           {isTabletPlaying ? (
             <video
               controls
-              className="video-tablet"
               width={tabletVideoWidth}
               height={tabletVideoHeight}
               style={{ display: isTabletPlaying ? "block" : "none" }}
@@ -58,22 +59,24 @@ export default function ProjectThree({
           ) : (
             <img
               className="project-image-tablet"
-              src={projectThree}
-              alt="A screenshot of my project 3"
+              src={projectFour}
+              alt="A screenshot of my project 4"
             />
           )}
-
+          <video controls className="video-tablet">
+            <source type="video/mp4" className="video-tablet-source" />
+          </video>
           <p className="project-description">{blurb}</p>
-          <div className="intersecting-element" data-img="2"></div>
+          <div className="intersecting-element" data-img="3"></div>
           <h4 className="project-description">Features:</h4>
           <div className="hover-wrapper">
-            {videoSrcArray3.map((_, index) => (
+            {videoSrcArray4.map((_, index) => (
               <button
-                className="hover3 hover"
+                className="hover4 hover"
                 onClick={(e) => changeVideo(e, index)}
                 key={index}
               >
-                {["Drag & drop", "Click to hit the ships", "Restart"][index]}
+                {["Autocomplete", "Recipe Generation By LLM"][index]}
                 <span className="material-symbols-outlined">
                   {currentVideoIndex === index && isPlaying
                     ? "stop_circle"
@@ -84,33 +87,40 @@ export default function ProjectThree({
           </div>
           <p className="project-description">
             <img
-              src={html}
-              alt="html"
-              data-tooltip-id="html-tooltip"
-              data-tooltip-content="HTML"
+              src={node}
+              alt="node"
+              data-tooltip-id="node-tooltip"
+              data-tooltip-content="Node.js"
             />
-            <Tooltip id="html-tooltip" />
+            <Tooltip id="node-tooltip" />
             <img
-              src={css}
-              alt="css"
-              data-tooltip-id="css-tooltip"
-              data-tooltip-content="CSS"
+              src={express}
+              alt="express"
+              data-tooltip-id="express-tooltip"
+              data-tooltip-content="Express.js"
             />
-            <Tooltip id="css-tooltip" />
+            <Tooltip id="express-tooltip" />
             <img
-              src={javascript}
-              alt="js"
-              data-tooltip-id="js-tooltip"
-              data-tooltip-content="JavaScript"
+              src={pug}
+              alt="pug"
+              data-tooltip-id="pug-tooltip"
+              data-tooltip-content="Pug.js"
             />
-            <Tooltip id="js-tooltip" />
+            <Tooltip id="pug-tooltip" />
             <img
-              src={webpack}
-              alt="webpack"
-              data-tooltip-id="webpack-tooltip"
-              data-tooltip-content="Webpack"
+              src={palm2}
+              alt="Pathways Language Model"
+              data-tooltip-id="palm2-tooltip"
+              data-tooltip-content="Pathways Language Model by Google AI"
             />
-            <Tooltip id="webpack-tooltip" />
+            <Tooltip id="palm2-tooltip" />
+            <img
+              src={aws}
+              alt="Amazon Web Services"
+              data-tooltip-id="aws-tooltip"
+              data-tooltip-content="Amazon Web Services"
+            />
+            <Tooltip id="aws-tooltip" />
             <img
               src={github}
               alt="github"

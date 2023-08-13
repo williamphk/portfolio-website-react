@@ -1,13 +1,7 @@
 import { useState, useEffect } from "react";
 import { Tooltip } from "react-tooltip";
 
-import aspnet from "../assets/icons/aspnet.svg";
-import csharp from "../assets/icons/csharp.svg";
-import mssql from "../assets/icons/mssql.svg";
-import github from "../assets/icons/github.svg";
-import bootstrap from "../assets/icons/bootstrap.svg";
-import azureDataStudio from "../assets/icons/azure-data-studio.svg";
-import docker from "../assets/icons/docker.svg";
+import github from "../../assets/icons/github.svg";
 
 export default function ProjectTwo({ projectTwo }) {
   const [projectName, setProjectName] = useState("");
@@ -49,48 +43,6 @@ export default function ProjectTwo({ projectTwo }) {
           <div className="intersecting-element" data-img="1"></div>
           <p className="project-description">{blurb2}</p>
           <p className="project-description">
-            <img
-              src={aspnet}
-              alt="aspnet"
-              data-tooltip-id="aspnet-tooltip"
-              data-tooltip-content="ASP.NET MVC"
-            />
-            <Tooltip id="aspnet-tooltip" />
-            <img
-              src={csharp}
-              alt="csharp"
-              data-tooltip-id="csharp-tooltip"
-              data-tooltip-content="C#"
-            />
-            <Tooltip id="csharp-tooltip" />
-            <img
-              src={mssql}
-              alt="mssql"
-              data-tooltip-id="mssql-tooltip"
-              data-tooltip-content="Microsoft SQL Server"
-            />
-            <Tooltip id="mssql-tooltip" />
-            <img
-              src={azureDataStudio}
-              alt="Azure Data Studio"
-              data-tooltip-id="azureDataStudio-tooltip"
-              data-tooltip-content="Azure Data Studio"
-            />
-            <Tooltip id="azureDataStudio-tooltip" />
-            <img
-              src={docker}
-              alt="docker"
-              data-tooltip-id="docker-tooltip"
-              data-tooltip-content="Docker"
-            />
-            <Tooltip id="docker-tooltip" />
-            <img
-              src={bootstrap}
-              alt="bootstrap"
-              data-tooltip-id="bootstrap-tooltip"
-              data-tooltip-content="Bootstrap"
-            />
-            <Tooltip id="bootstrap-tooltip" />
             <img
               src={github}
               alt="github"
