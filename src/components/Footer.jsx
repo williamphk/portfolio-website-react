@@ -24,9 +24,18 @@ export default function Footer() {
         <a href="https://williamphk.github.io/odin_Battleship/" target="_blank">
           Battleship
         </a>
+        <a target="_blank" href="https://github.com/williamphk/DiscountDish/">
+          Ingredient Mixer
+        </a>
         <a
           target="_blank"
-          href="https://github.com/williamphk/portfolio-website"
+          href="https://github.com/williamphk/portfolio-laravel-API/"
+        >
+          Portofolio CMS
+        </a>
+        <a
+          target="_blank"
+          href="https://github.com/williamphk/portfolio-website/"
         >
           Portfolio
         </a>

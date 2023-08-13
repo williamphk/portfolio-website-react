@@ -97,7 +97,7 @@ export default function ProjectOne({
               </button>
             ))}
           </div>
-          <p className="project-description">
+          <div className="project-description">
             <img
               src={node}
               alt="node"
@@ -168,7 +168,7 @@ export default function ProjectOne({
               data-tooltip-content="Github"
             />
             <Tooltip id="github-tooltip" />
-          </p>
+          </div>
           <div className="project-button-wrapper">
             <a
               href={githubFrontEndURL}

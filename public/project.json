@@ -26,7 +26,7 @@
     },
     {
         "projectName":"Portofolio CMS",
-        "blurb": "",
+        "blurb": "Laravel Portfolio CMS is a web platform designed to help professionals showcase their work effortlessly. Instead of wrestling with complex layouts and designs, let Laravel Portfolio CMS craft the perfect portfolio for you, spotlighting your talents and achievements!",
         "githubURL":"https://github.com/williamphk/portfolio-laravel-API/",
         "liveURL":"http://3.145.155.140/"
     }

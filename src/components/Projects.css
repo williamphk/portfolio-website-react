@@ -89,13 +89,6 @@
   border-radius: 25px;
 }
 
-.project-one,
-.project-two,
-.project-three {
-  display: flex;
-  width: 100%;
-}
-
 .project-image-tablet {
   display: none;
 }
@@ -167,13 +160,15 @@
   .project-one .project-image,
   .project-two .project-image,
   .project-three .project-image,
-  .project-four .project-image {
+  .project-four .project-image,
+  .project-five .project-image {
     display: none;
   }
   .project-one,
   .project-two,
   .project-three,
-  .project-four {
+  .project-four,
+  .project-five {
     width: min(689px, 100%);
     padding: 2em 0;
   }
@@ -251,7 +246,8 @@
   .project-one,
   .project-two,
   .project-three,
-  .project-four {
+  .project-four,
+  .project-five {
     width: auto;
     height: auto;
     background-size: auto;

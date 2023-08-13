@@ -6,11 +6,13 @@ import ProjectOne from "./projects/ProjectOne.jsx";
 import ProjectTwo from "./projects/ProjectTwo.jsx";
 import ProjectThree from "./projects/ProjectThree.jsx";
 import ProjectFour from "./projects/ProjectFour.jsx";
+import ProjectFive from "./projects/ProjectFive.jsx";
 
 import projectOne from "../assets/project-one.webp";
 import projectTwo from "../assets/project-two.webp";
 import projectThree from "../assets/project-three.webp";
 import projectFour from "../assets/project-four.png";
+import projectFive from "../assets/project-five.png";
 
 import register from "../assets/videos/Project_1/Register.mp4";
 import oauth from "../assets/videos/Project_1/OAuth.mp4";
@@ -31,7 +33,13 @@ export default function Projects() {
   const [currentImageIndex, setCurrentImageIndex] = useState(null);
   const [isTablet, setIsTablet] = useState(false);
 
-  const imageArray = [projectOne, projectTwo, projectThree, projectFour];
+  const imageArray = [
+    projectOne,
+    projectTwo,
+    projectThree,
+    projectFour,
+    projectFive,
+  ];
 
   const [currentVideoSrc, setCurrentVideoSrc] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -144,12 +152,7 @@ export default function Projects() {
             tabletVideoWidth={tabletVideoWidth}
             tabletVideoHeight={tabletVideoHeight}
           />
-          <ProjectTwo
-            projectTwo={projectTwo}
-            currentVideoIndex={currentVideoIndex}
-            changeVideo={changeVideo}
-            isPlaying={isPlaying}
-          />
+          <ProjectTwo projectTwo={projectTwo} />
           <ProjectThree
             projectThree={projectThree}
             videoSrcArray3={videoSrcArray3}
@@ -176,6 +179,7 @@ export default function Projects() {
             tabletVideoWidth={tabletVideoWidth}
             tabletVideoHeight={tabletVideoHeight}
           />
+          <ProjectFive projectFive={projectFive} />
         </div>
         {isTablet ? (
           <></>

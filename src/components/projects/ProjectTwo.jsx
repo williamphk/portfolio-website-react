@@ -48,7 +48,7 @@ export default function ProjectTwo({ projectTwo }) {
           <p className="project-description">{blurb1}</p>
           <div className="intersecting-element" data-img="1"></div>
           <p className="project-description">{blurb2}</p>
-          <p className="project-description">
+          <div className="project-description">
             <img
               src={aspnet}
               alt="aspnet"
@@ -98,7 +98,7 @@ export default function ProjectTwo({ projectTwo }) {
               data-tooltip-content="Github"
             />
             <Tooltip id="github-tooltip" />
-          </p>
+          </div>
 
           <div className="project-button-wrapper">
             <a href={githubURL} className="live-preview-button" target="_blank">
