@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./About.css";
 
-import profilePic from "../assets/profile-pic.jpg";
+import profilePic from "../assets/profile-pic.webp";
 
 export default function About() {
   const [name, setName] = useState("");

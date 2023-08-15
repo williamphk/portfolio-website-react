@@ -8,7 +8,7 @@ export default function BackToTop() {
       aria-hidden="true"
       aria-label="Back to top"
     >
-      <i class="fa-solid fa-arrow-up"></i>
+      <i className="fa-solid fa-arrow-up"></i>
     </a>
   );
 }

@@ -11,8 +11,8 @@ import ProjectFive from "./projects/ProjectFive.jsx";
 import projectOne from "../assets/project-one.webp";
 import projectTwo from "../assets/project-two.webp";
 import projectThree from "../assets/project-three.webp";
-import projectFour from "../assets/project-four.png";
-import projectFive from "../assets/project-five.png";
+import projectFour from "../assets/project-four.webp";
+import projectFive from "../assets/project-five.webp";
 
 import register from "../assets/videos/Project_1/Register.mp4";
 import oauth from "../assets/videos/Project_1/OAuth.mp4";
