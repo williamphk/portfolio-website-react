@@ -160,6 +160,7 @@ a#scroll-btn:after {
     padding-left: clamp(1em, 4vw, 4em);
     padding-right: clamp(1em, 4vw, 4em);
     padding-bottom: 12%;
+    background-size: auto;
   }
   .profile-pic {
     position: static;
