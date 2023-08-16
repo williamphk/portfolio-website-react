@@ -44,6 +44,7 @@ export default function Footer() {
         <div>Contact</div>
         <a href="https://www.linkedin.com/in/williamphk/">LinkedIn</a>
         <a href="https://github.com/williamphk">GitHub</a>
+        <a href="mailto:willphk@outlook.com">Email</a>
       </div>
       <div>
         <div>Attribution</div>
