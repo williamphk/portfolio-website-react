@@ -3,7 +3,9 @@
   --secondaryColor: #000000;
   --tertiaryColor: #f6f6f6;
   --bodyFontDesktop: 22px;
+  --bodyFontDesktopFooter: 18px;
   --bodyFontPhone: 18px;
+  --bodyFontPhoneFooter: 14px;
 }
 
 /* Resetting margins and padding */

@@ -1,6 +1,6 @@
 /* FOOTER */
 footer {
-  font-size: var(--bodyFontDesktop);
+  font-size: var(--bodyFontDesktopFooter);
   background-color: #333333;
   color: var(--tertiaryColor);
   display: flex;
@@ -58,7 +58,7 @@ footer a {
   footer {
     flex-direction: column;
     justify-content: flex-start;
-    font-size: var(--bodyFontPhone);
+    font-size: var(--bodyFontPhoneFooter);
     line-height: normal;
   }
 }
