@@ -109,6 +109,14 @@ export default function ProjectTwo({ projectTwo }) {
               Demonstration
               <span className="material-symbols-outlined">open_in_new</span>
             </a>
+            <a
+              href="http://ec2-3-134-95-190.us-east-2.compute.amazonaws.com/"
+              className="live-preview-button"
+              target="_blank"
+            >
+              Live Preview
+              <span className="material-symbols-outlined">open_in_new</span>
+            </a>
           </div>
         </div>
       </div>
