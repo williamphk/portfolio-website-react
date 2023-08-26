@@ -14,13 +14,13 @@ export default function Header() {
     <header>
       <nav>
         <div className={`nav-link ${showMenu ? "show-menu" : ""}`}>
-          <a className="link" href="#about">
+          <a className="link" href="#about" onClick={toggleMenu}>
             <i className="fa-solid fa-house"></i>HOME
           </a>
-          <a className="link" href="#work">
+          <a className="link" href="#work" onClick={toggleMenu}>
             <i className="fa-solid fa-folder"></i>PROJECTS
           </a>
-          <a className="link" href="#contact">
+          <a className="link" href="#contact" onClick={toggleMenu}>
             <i className="fa-solid fa-address-card"></i>CONTACT
           </a>
         </div>
