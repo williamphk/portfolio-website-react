@@ -72,7 +72,7 @@ export default function ProjectOne({
           )}
           <p className="project-description">{blurb}</p>
           <div className="intersecting-element" data-img="0"></div>
-          <h4 className="project-description">Features:</h4>
+          <h4 className="project-description">Key Features:</h4>
           <div className="hover-wrapper">
             {videoSrcArray1.map((_, index) => (
               <button
@@ -82,11 +82,11 @@ export default function ProjectOne({
               >
                 {
                   [
-                    "Register & Login",
-                    "Facebook OAuth",
-                    "Post & comment",
-                    "Friend request & Friend",
-                    "Profile",
+                    "Custom authentication with JWT and Passport.js",
+                    "Sign-ins with Facebook OAuth",
+                    "Create posts and interact with comments and likes",
+                    "Conditional rendering based on friend status",
+                    "Profile Customization",
                   ][index]
                 }
                 <span className="material-symbols-outlined">

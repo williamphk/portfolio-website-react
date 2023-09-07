@@ -68,7 +68,7 @@ export default function ProjectFour({
           </video>
           <p className="project-description">{blurb}</p>
           <div className="intersecting-element" data-img="3"></div>
-          <h4 className="project-description">Features:</h4>
+          <h4 className="project-description">Key Features:</h4>
           <div className="hover-wrapper">
             {videoSrcArray4.map((_, index) => (
               <button
@@ -76,7 +76,12 @@ export default function ProjectFour({
                 onClick={(e) => changeVideo(e, index)}
                 key={index}
               >
-                {["Autocomplete", "Recipe Generation By LLM"][index]}
+                {
+                  [
+                    "Autocomplete with Datamuse API",
+                    "Recipe Generation By LLM",
+                  ][index]
+                }
                 <span className="material-symbols-outlined">
                   {currentVideoIndex === index && isPlaying
                     ? "stop_circle"

@@ -260,7 +260,7 @@
     width: 50%;
   }
   .live-preview-button {
-    font-size: var(--bodyFontPhone);
+    font-size: 14px;
     padding: 10px;
   }
   .hover {

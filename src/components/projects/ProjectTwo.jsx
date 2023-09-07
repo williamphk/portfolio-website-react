@@ -47,7 +47,18 @@ export default function ProjectTwo({ projectTwo }) {
           </video>
           <p className="project-description">{blurb1}</p>
           <div className="intersecting-element" data-img="1"></div>
-          <p className="project-description">{blurb2}</p>
+          <h4 className="project-description">Key Features:</h4>
+          <div className="hover-wrapper">
+            <button className="hover2 hover">User authentication system</button>
+            <button className="hover2 hover">Image uploading</button>
+            <button className="hover2 hover">
+              Role-based conditional rendering
+            </button>
+            <button className="hover2 hover">API Help page</button>
+            <button className="hover2 hover">
+              Library integration: TinyMCE and Lightbox
+            </button>
+          </div>
           <div className="project-description">
             <img
               src={aspnet}

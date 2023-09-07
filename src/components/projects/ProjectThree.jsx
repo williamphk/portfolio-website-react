@@ -65,7 +65,7 @@ export default function ProjectThree({
 
           <p className="project-description">{blurb}</p>
           <div className="intersecting-element" data-img="2"></div>
-          <h4 className="project-description">Features:</h4>
+          <h4 className="project-description">Key Features:</h4>
           <div className="hover-wrapper">
             {videoSrcArray3.map((_, index) => (
               <button
@@ -73,7 +73,13 @@ export default function ProjectThree({
                 onClick={(e) => changeVideo(e, index)}
                 key={index}
               >
-                {["Drag & drop", "Click to hit the ships", "Restart"][index]}
+                {
+                  [
+                    "Drag and drop to position your fleet",
+                    "Click to launch strikes and sink enemy ships",
+                    "Quick restart option for new challenges",
+                  ][index]
+                }
                 <span className="material-symbols-outlined">
                   {currentVideoIndex === index && isPlaying
                     ? "stop_circle"

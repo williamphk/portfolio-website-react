@@ -43,6 +43,12 @@ export default function ProjectFive({ projectFive }) {
           </video>
           <p className="project-description">{blurb}</p>
           <div className="intersecting-element" data-img="4"></div>
+          <h4 className="project-description">Key Features:</h4>
+          <div className="hover-wrapper">
+            <button className="hover5 hover">Authentication system</button>
+            <button className="hover5 hover">Image uploading</button>
+            <button className="hover5 hover">JSON Endpoint</button>
+          </div>
           <div className="project-description">
             <img
               src={php}
