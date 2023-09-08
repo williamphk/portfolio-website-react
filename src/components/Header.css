@@ -78,6 +78,7 @@ nav {
     position: absolute;
     top: 40px;
     transition: height 0.7s;
+    left: 0;
   }
   .menu-toggle {
     display: block;
