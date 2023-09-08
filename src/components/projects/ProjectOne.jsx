@@ -77,7 +77,7 @@ export default function ProjectOne({
             {videoSrcArray1.map((_, index) => (
               <button
                 className="hover1 hover"
-                onClick={(e) => changeVideo(e, index)}
+                onMouseOver={(e) => changeVideo(e, index)}
                 key={index}
               >
                 {

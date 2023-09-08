@@ -70,7 +70,7 @@ export default function ProjectThree({
             {videoSrcArray3.map((_, index) => (
               <button
                 className="hover3 hover"
-                onClick={(e) => changeVideo(e, index)}
+                onMouseOver={(e) => changeVideo(e, index)}
                 key={index}
               >
                 {

@@ -73,7 +73,7 @@ export default function ProjectFour({
             {videoSrcArray4.map((_, index) => (
               <button
                 className="hover4 hover"
-                onClick={(e) => changeVideo(e, index)}
+                onMouseOver={(e) => changeVideo(e, index)}
                 key={index}
               >
                 {

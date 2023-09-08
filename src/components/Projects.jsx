@@ -194,6 +194,7 @@ export default function Projects() {
                 onEnded={() => setIsPlaying(false)}
                 src={currentVideoSrc}
                 autoPlay
+                muted
               />
             ) : (
               <div>
