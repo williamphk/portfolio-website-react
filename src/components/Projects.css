@@ -248,6 +248,8 @@
   .project-three,
   .project-four,
   .project-five {
+    background-color: #e4e4e4;
+    border-radius: 25px;
     width: auto;
     height: auto;
     background-size: auto;
@@ -255,6 +257,9 @@
   .project-description-and-live-preview-button {
     padding: 0;
     width: 100%;
+  }
+  .project-image-tablet {
+    width: 95vw;
   }
   .project-description img {
     width: 40px;
@@ -272,6 +277,7 @@
     margin: 0 7px;
     padding: 7px 12px;
     text-align: left;
+    background-color: #d1d1d1;
   }
   svg {
     width: 40px;

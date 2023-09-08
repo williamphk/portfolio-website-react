@@ -211,6 +211,9 @@ a#scroll-btn:after {
 /* PHONE */
 @media only screen and (max-width: 415px) {
   /* ABOUT*/
+  .about {
+    margin: 10px;
+  }
   .self-introduction {
     font-size: var(--bodyFontPhone);
     padding: 0 3%;
