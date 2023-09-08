@@ -71,7 +71,7 @@ nav {
   }
   .nav-link {
     flex-direction: column;
-    width: 98.7%;
+    width: 100%;
     gap: 2em;
     height: 0;
     overflow: hidden;
