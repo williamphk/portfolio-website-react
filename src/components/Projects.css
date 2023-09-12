@@ -161,14 +161,16 @@
   .project-two .project-image,
   .project-three .project-image,
   .project-four .project-image,
-  .project-five .project-image {
+  .project-five .project-image,
+  .project-six .project-image {
     display: none;
   }
   .project-one,
   .project-two,
   .project-three,
   .project-four,
-  .project-five {
+  .project-five,
+  .project-six {
     width: min(689px, 100%);
     padding: 1em 0;
   }
@@ -247,7 +249,8 @@
   .project-two,
   .project-three,
   .project-four,
-  .project-five {
+  .project-five,
+  .project-six {
     background-color: #e4e4e4;
     border-radius: 25px;
     width: auto;
