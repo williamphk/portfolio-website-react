@@ -121,7 +121,7 @@ export default function ProjectTwo({ projectTwo }) {
               <span className="material-symbols-outlined">open_in_new</span>
             </a>
             <a
-              href="http://ec2-3-134-95-190.us-east-2.compute.amazonaws.com/"
+              href="https://hikoukianime.azurewebsites.net/"
               className="live-preview-button"
               target="_blank"
             >
