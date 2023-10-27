@@ -69,6 +69,7 @@ export default function ProjectSix({ projectSix }) {
             <a
               href="https://williamphk.github.io/Useless-Web/"
               className="live-preview-button"
+              id="live-preview"
               target="_blank"
             >
               Live Preview

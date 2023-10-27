@@ -186,7 +186,12 @@ export default function ProjectOne({
               Source Code: Backend
               <span className="material-symbols-outlined">open_in_new</span>
             </a>
-            <a href={liveURL} className="live-preview-button" target="_blank">
+            <a
+              href={liveURL}
+              className="live-preview-button"
+              id="live-preview"
+              target="_blank"
+            >
               Live Preview
               <span className="material-symbols-outlined">open_in_new</span>
             </a>

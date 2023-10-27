@@ -123,6 +123,7 @@ export default function ProjectTwo({ projectTwo }) {
             <a
               href="https://hikoukianime.azurewebsites.net/"
               className="live-preview-button"
+              id="live-preview"
               target="_blank"
             >
               Live Preview
