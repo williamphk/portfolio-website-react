@@ -30,12 +30,17 @@ export default function About() {
       <h1 className="my-name">{name}</h1>
       <h2 className="job-title">{jobTitle}</h2>
       <p className="self-introduction">
-        Welcome to my portfolio! I'm specializing in React.js, Node.js, ASP.NET
-        and Laravel, and fueled by a passion for turning imaginative ideas into
-        user-friendly applications. My aim is to create engaging web experiences
-        that are not only functional but also bring joy to users. I love working
-        in collaborative environments, as it allows me to learn and grow in
-        ideas.
+        I recently graduated from college in Toronto. This website showcases
+        some of the projects I've worked on over the years, mostly from my time
+        while studying{" "}
+        <a href="https://mediaarts.humber.ca/programs/web-development.html">
+          Web Development at Humber College
+        </a>{" "}
+        where I completed my Graduate Certificate and{" "}
+        <a href="https://www.theodinproject.com/">The Odin Project</a>. <br />
+        <br />I specialize in React.js, Node.js, and .NET. and fueled by a
+        passion for turning imaginative ideas into user-friendly applications
+        that bring joy to people.
       </p>
       <div className="skills">
         <img
