@@ -49,6 +49,7 @@ export default function About() {
           data-tooltip-content="JavaScript"
           width="45"
           height="45"
+          alt="JavaScript"
         />
         <Tooltip id="js-tooltip" />
         <img
@@ -57,6 +58,7 @@ export default function About() {
           data-tooltip-content="TypeScript"
           width="45"
           height="45"
+          alt="TypeScript"
         />
         <Tooltip id="ts-tooltip" />
         <img
@@ -65,6 +67,7 @@ export default function About() {
           data-tooltip-content="C#"
           width="45"
           height="45"
+          alt="C#"
         />
         <Tooltip id="cs-tooltip" />
         <img
@@ -73,6 +76,7 @@ export default function About() {
           data-tooltip-content="PHP"
           width="45"
           height="45"
+          alt="PHP"
         />
         <Tooltip id="php-tooltip" />
         <img
@@ -81,6 +85,7 @@ export default function About() {
           data-tooltip-content="HTML"
           width="45"
           height="45"
+          alt="HTML"
         />
         <Tooltip id="html-tooltip" />
         <img
@@ -89,6 +94,7 @@ export default function About() {
           data-tooltip-content="CSS"
           width="45"
           height="45"
+          alt="CSS"
         />
         <Tooltip id="css-tooltip" />
         <img
@@ -97,6 +103,7 @@ export default function About() {
           data-tooltip-content="SASS"
           width="45"
           height="45"
+          alt="SASS"
         />
         <Tooltip id="sass-tooltip" />
         <img
@@ -105,6 +112,7 @@ export default function About() {
           data-tooltip-content="React.js"
           width="45"
           height="45"
+          alt="React.js"
         />
 
         <Tooltip id="react-tooltip" />
@@ -114,6 +122,7 @@ export default function About() {
           data-tooltip-content="Redux"
           width="45"
           height="45"
+          alt="Redux"
         />
         <Tooltip id="redux-tooltip" />
         <img
@@ -122,6 +131,7 @@ export default function About() {
           data-tooltip-content="Tailwind CSS"
           width="45"
           height="45"
+          alt="Tailwind CSS"
         />
         <Tooltip id="tailwind-tooltip" />
         <img
@@ -130,6 +140,7 @@ export default function About() {
           data-tooltip-content="Material UI"
           width="45"
           height="45"
+          alt="Material UI"
         />
         <Tooltip id="materialui-tooltip" />
         <img
@@ -138,6 +149,7 @@ export default function About() {
           data-tooltip-content="Webpack"
           width="45"
           height="45"
+          alt="Webpack"
         />
         <Tooltip id="webpack-tooltip" />
         <img
@@ -146,6 +158,7 @@ export default function About() {
           data-tooltip-content="Bootstrap"
           width="45"
           height="45"
+          alt="Bootstrap"
         />
         <Tooltip id="bootstrap-tooltip" />
         <img
@@ -154,6 +167,7 @@ export default function About() {
           data-tooltip-content="jQuery"
           width="45"
           height="45"
+          alt="jQuery"
         />
         <Tooltip id="jquery-tooltip" />
         <img
@@ -162,6 +176,7 @@ export default function About() {
           data-tooltip-content="styled-components"
           width="45"
           height="45"
+          alt="styled-components"
         />
         <Tooltip id="styledcomponents-tooltip" />
         <img
@@ -170,6 +185,7 @@ export default function About() {
           data-tooltip-content="Github"
           width="45"
           height="45"
+          alt="Github"
         />
         <Tooltip id="github-tooltip" />
         <img
@@ -178,6 +194,7 @@ export default function About() {
           data-tooltip-content="Vercel"
           width="45"
           height="45"
+          alt="Vercel"
         />
         <Tooltip id="vercel-tooltip" />
         <img
@@ -186,6 +203,7 @@ export default function About() {
           data-tooltip-content="Figma"
           width="45"
           height="45"
+          alt="Figma"
         />
         <Tooltip id="figma-tooltip" />
         <img
@@ -194,6 +212,7 @@ export default function About() {
           data-tooltip-content="Wordpress"
           width="45"
           height="45"
+          alt="Wordpress"
         />
         <Tooltip id="wordpress-tooltip" />
         <img
@@ -202,6 +221,7 @@ export default function About() {
           data-tooltip-content="Node.js"
           width="45"
           height="45"
+          alt="Node.js"
         />
 
         <Tooltip id="nodejs-tooltip" />
@@ -211,6 +231,7 @@ export default function About() {
           data-tooltip-content="Express.js"
           width="45"
           height="45"
+          alt="Express.js"
         />
         <Tooltip id="express-tooltip" />
         <img
@@ -219,6 +240,7 @@ export default function About() {
           data-tooltip-content="MongoDB"
           width="45"
           height="45"
+          alt="MongoDB"
         />
         <Tooltip id="mongodb-tooltip" />
         <img
@@ -227,6 +249,7 @@ export default function About() {
           data-tooltip-content=".NET"
           width="45"
           height="45"
+          alt=".NET"
         />
         <Tooltip id="dotnet-tooltip" />
         <img
@@ -235,6 +258,7 @@ export default function About() {
           data-tooltip-content="Laravel"
           width="45"
           height="45"
+          alt="Laravel"
         />
         <Tooltip id="laravel-tooltip" />
         <img
@@ -243,6 +267,7 @@ export default function About() {
           data-tooltip-content="MySQL"
           width="45"
           height="45"
+          alt="MySQL"
         />
         <Tooltip id="mysql-tooltip" />
         <img
@@ -251,6 +276,7 @@ export default function About() {
           data-tooltip-content="Firebase"
           width="45"
           height="45"
+          alt="Firebase"
         />
         <Tooltip id="firebase-tooltip" />
         <img
@@ -259,6 +285,7 @@ export default function About() {
           data-tooltip-content="Postman"
           width="45"
           height="45"
+          alt="Postman"
         />
         <Tooltip id="postman-tooltip" />
         <img
@@ -267,6 +294,7 @@ export default function About() {
           data-tooltip-content="Amazon Web Services"
           width="45"
           height="45"
+          alt="Amazon Web Services"
         />
         <Tooltip id="aws-tooltip" />
         <img
@@ -275,6 +303,7 @@ export default function About() {
           data-tooltip-content="Azure"
           width="45"
           height="45"
+          alt="Azure"
         />
         <Tooltip id="azure-tooltip" />
         <img
@@ -283,6 +312,7 @@ export default function About() {
           data-tooltip-content="Docker"
           width="45"
           height="45"
+          alt="Docker"
         />
         <Tooltip id="docker-tooltip" />
       </div>
