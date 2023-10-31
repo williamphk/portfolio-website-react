@@ -316,20 +316,6 @@ export default function About() {
         />
         <Tooltip id="docker-tooltip" />
       </div>
-      <div className="icon-wrapper">
-        <a href="https://www.linkedin.com/in/williamphk/" target="_blank">
-          LinkedIn
-          <i className="fa-brands fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/williamphk" target="_blank">
-          Github
-          <i className="fa-brands fa-square-github"></i>
-        </a>
-        <a href="mailto:willphk@outlook.com" target="_blank">
-          Email
-          <i className="fa-solid fa-envelope"></i>
-        </a>
-      </div>
       <a href="#work" className="about-section-button">
         Check out my works!
         <div className="button__shadow"></div>

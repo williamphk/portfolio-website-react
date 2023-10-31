@@ -17,13 +17,47 @@
 }
 .contact-wrapper div a {
   font-size: 30px;
-  color: var(--primaryColor);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .contact-wrapper div a:hover {
   color: #666666;
+}
+
+.contact-wrapper .icon {
+  background: #ffffff;
+  color: #000000;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.contact-wrapper .email:hover {
+  color: #ffffff;
+  background: #a200ff;
+  transform: scale(1.1) translateY(-10px);
+}
+
+.contact-wrapper .github:hover {
+  color: #ffffff;
+  background: #333333;
+  transform: scale(1.1) translateY(-10px);
+}
+
+.contact-wrapper .linkedin:hover {
+  color: #ffffff;
+  background: #0077b5;
+  transform: scale(1.2) translateY(-10px);
 }
 
 /* TABLET */

@@ -22,10 +22,28 @@ export default function Contact() {
         <p>Thank you for visiting my portfolio website</p>
         <p>Feel free to contact me!</p>
         <div>
-          <a href={email} title="My email address">
+          <a
+            href={email}
+            title="My email address"
+            target="_blank"
+            className="icon email"
+          >
             <i className="fa-solid fa-envelope"></i>
           </a>
-          <a href={linkedIn} title="Link to my LinkedIn Account">
+          <a
+            href="https://github.com/williamphk"
+            title="Link to my Github"
+            target="_blank"
+            className="icon github"
+          >
+            <i className="fa-brands fa-square-github"></i>
+          </a>
+          <a
+            href={linkedIn}
+            title="Link to my LinkedIn Account"
+            target="_blank"
+            className="icon linkedin"
+          >
             <i className="fa-brands fa-linkedin"></i>
           </a>
         </div>
