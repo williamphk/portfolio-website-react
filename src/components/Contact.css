@@ -45,13 +45,13 @@
 .contact-wrapper .email:hover {
   color: #ffffff;
   background: #a200ff;
-  transform: scale(1.1) translateY(-10px);
+  transform: scale(1.2) translateY(-10px);
 }
 
 .contact-wrapper .github:hover {
   color: #ffffff;
   background: #333333;
-  transform: scale(1.1) translateY(-10px);
+  transform: scale(1.2) translateY(-10px);
 }
 
 .contact-wrapper .linkedin:hover {
