@@ -34,6 +34,7 @@
 .project-description-and-live-preview-button {
   padding-top: 0;
   padding-right: clamp(1em, 2vw, 2em);
+  width: 100%;
 }
 
 .project-description {
