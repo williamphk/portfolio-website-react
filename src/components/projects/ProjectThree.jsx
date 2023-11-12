@@ -38,7 +38,7 @@ export default function ProjectThree({
   }, []);
 
   return (
-    <article className="project-three">
+    <article className="project">
       <div className="project-introduction hidden">
         <div>
           <h3 className="project-title">{projectName}</h3>

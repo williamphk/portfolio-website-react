@@ -7,7 +7,7 @@ import github from "../../assets/icons/github.svg";
 
 export default function ProjectSix({ projectSix }) {
   return (
-    <article className="project-six">
+    <article className="project">
       <div className="project-introduction hidden">
         <div>
           <h3 className="project-title">Checkbox Snake</h3>

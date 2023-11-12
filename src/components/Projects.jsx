@@ -141,7 +141,7 @@ export default function Projects() {
     <section className="work" id="work">
       <h2 className="section-title">Crafted with Heart</h2>
       <div className="project-wrapper">
-        <div className="project" ref={observeElementsRef}>
+        <div className="projects" ref={observeElementsRef}>
           <ProjectOne
             projectOne={projectOne}
             videoSrcArray1={videoSrcArray1}

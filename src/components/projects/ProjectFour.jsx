@@ -39,7 +39,7 @@ export default function ProjectFour({
   }, []);
 
   return (
-    <article className="project-four">
+    <article className="project">
       <div className="project-introduction hidden">
         <div>
           <h3 className="project-title">{projectName}</h3>

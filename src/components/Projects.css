@@ -1,5 +1,5 @@
 /* PROJECTS */
-.project {
+.projects {
   display: flex;
   flex-direction: column;
   width: 55%;
@@ -176,26 +176,16 @@
 
 /* TABLET */
 @media only screen and (max-width: 1200px) {
-  .project {
+  .projects {
     gap: 2vh;
     margin-top: 0;
     margin-bottom: 0;
   }
 
-  .project-one .project-image,
-  .project-two .project-image,
-  .project-three .project-image,
-  .project-four .project-image,
-  .project-five .project-image,
-  .project-six .project-image {
+  .project .project-image {
     display: none;
   }
-  .project-one,
-  .project-two,
-  .project-three,
-  .project-four,
-  .project-five,
-  .project-six {
+  .project {
     width: min(689px, 100%);
     padding: 1em 0;
   }
@@ -223,7 +213,7 @@
   .image-wrapper {
     display: none;
   }
-  .project {
+  .projects {
     width: 100%;
   }
   .project-introduction,
@@ -270,12 +260,7 @@
   .project-introduction {
     gap: 0;
   }
-  .project-one,
-  .project-two,
-  .project-three,
-  .project-four,
-  .project-five,
-  .project-six {
+  .project {
     background-color: #e4e4e4;
     border-radius: 25px;
     width: auto;
