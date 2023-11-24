@@ -12,7 +12,6 @@ import docker from "../../assets/icons/docker.svg";
 export default function ProjectTwo({ projectTwo }) {
   const [projectName, setProjectName] = useState("");
   const [blurb1, setBlurb1] = useState("");
-  const [blurb2, setBlurb2] = useState("");
   const [liveURL, setLiveURL] = useState("");
   const [githubURL, setGithubURL] = useState("");
 
@@ -23,7 +22,6 @@ export default function ProjectTwo({ projectTwo }) {
 
       setProjectName(data[1].projectName);
       setBlurb1(data[1].blurb[0]);
-      setBlurb2(data[1].blurb[1]);
       setLiveURL(data[1].liveURL);
       setGithubURL(data[1].githubURL);
     };

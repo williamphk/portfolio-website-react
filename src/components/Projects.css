@@ -112,6 +112,7 @@
   height: auto;
   width: 100%;
   border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 40px;
 }
 
 .project-image-tablet {
