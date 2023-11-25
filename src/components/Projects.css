@@ -101,6 +101,7 @@
   padding: 0px 20px;
   position: sticky;
   top: 5px;
+  overflow: hidden;
 }
 
 .image-wrapper :nth-child(2),
@@ -113,6 +114,12 @@
   width: 100%;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 40px;
+  transition: all 0.5s ease 0s;
+  cursor: pointer;
+}
+
+.project-image:hover {
+  transform: scale(1.03);
 }
 
 .project-image-tablet {
