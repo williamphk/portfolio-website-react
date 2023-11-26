@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useLayoutEffect, useRef } from "react";
+import { gsap } from "gsap";
 import { Tooltip } from "react-tooltip";
 
 import "./About.css";
@@ -19,8 +20,26 @@ export default function About() {
     getAbout();
   }, []);
 
+  const app = useRef(null);
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      const tl = gsap.timeline();
+
+      tl.to(".animation-box", {
+        duration: 2.4,
+        y: "-100%",
+        ease: "expo.inOut",
+        delay: 4.35,
+      });
+    }, app);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="about" id="about">
+    <section className="about" id="about" ref={app}>
+      <div className="animation-box"></div>
       <p className="self-introduction">Hi! My name is</p>
       <img
         src={profilePic}

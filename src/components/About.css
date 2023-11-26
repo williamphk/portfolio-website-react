@@ -12,7 +12,20 @@
   align-items: center;
   background-image: url("../assets/about-background.png");
   background-size: cover;
+  overflow: hidden;
 }
+
+.animation-box {
+  background: white;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+}
+
 .self-introduction {
   color: var(--secondaryColor);
   font-size: var(--bodyFontDesktop);
