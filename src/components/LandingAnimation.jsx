@@ -11,14 +11,14 @@ const LandingAnimation = () => {
       const tl = gsap.timeline();
 
       tl.from(".landing-animation__loader", {
-        duration: 1.6,
+        duration: 1.5,
         y: 80,
         scaleY: 0,
         ease: "expo.inOut",
         delay: 1,
         transformOrigin: "50% 100%",
       }).to(".landing-animation__loader", {
-        duration: 1.6,
+        duration: 1.5,
         scaleY: 0,
         height: "20vh",
         ease: "expo.inOut",
