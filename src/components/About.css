@@ -51,6 +51,11 @@
   line-height: 115px;
 }
 
+.my-name .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
 .job-title {
   font-size: 65px;
   color: #1e50dd;

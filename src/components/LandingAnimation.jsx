@@ -25,11 +25,15 @@ const LandingAnimation = () => {
         transformOrigin: "0% -100%",
       });
 
-      tl.to(app.current, {
-        duration: 2,
-        top: "-200%",
-        ease: "expo.inOut",
-      });
+      tl.to(
+        app.current,
+        {
+          duration: 2,
+          top: "-200%",
+          ease: "expo.inOut",
+        },
+        "-=0.25"
+      );
     }, app);
 
     return () => ctx.revert();

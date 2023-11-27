@@ -1,4 +1,4 @@
-import { useEffect, useState, useLayoutEffect, useRef } from "react";
+import { useEffect, useState, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { Tooltip } from "react-tooltip";
 
@@ -20,25 +20,32 @@ export default function About() {
     getAbout();
   }, []);
 
-  const app = useRef(null);
-
   useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      const tl = gsap.timeline();
+    const tl = gsap.timeline();
 
-      tl.to(".animation-box", {
-        duration: 2.4,
-        y: "-100%",
+    tl.to(".animation-box", {
+      duration: 2.2,
+      y: "-100%",
+      ease: "expo.inOut",
+      delay: 3.75,
+    });
+
+    tl.fromTo(
+      ".my-name .letter",
+      { translateY: 200, opacity: 0, delay: 0 },
+      {
+        translateY: 0,
+        opacity: 1,
         ease: "expo.inOut",
-        delay: 4.35,
-      });
-    }, app);
-
-    return () => ctx.revert();
+        duration: 2,
+        stagger: 0.05,
+      },
+      "-=2.15"
+    );
   }, []);
 
   return (
-    <section className="about" id="about" ref={app}>
+    <section className="about" id="about">
       <div className="animation-box"></div>
       <p className="self-introduction">Hi! My name is</p>
       <img
@@ -46,7 +53,22 @@ export default function About() {
         alt="William's profile pic"
         className="profile-pic"
       />
-      <h1 className="my-name">{name}</h1>
+
+      <h1 className="my-name">
+        <span className="letter">W</span>
+        <span className="letter">i</span>
+        <span className="letter">l</span>
+        <span className="letter">l</span>
+        <span className="letter">i</span>
+        <span className="letter">a</span>
+        <span className="letter">m</span>
+        <span className="letter"> </span>
+        <span className="letter">P</span>
+        <span className="letter">o</span>
+        <span className="letter">o</span>
+        <span className="letter">n</span>
+      </h1>
+
       <h2 className="job-title">{jobTitle}</h2>
       <p className="self-introduction">
         I recently graduated from college in Toronto. This website showcases
@@ -348,3 +370,24 @@ export default function About() {
     </section>
   );
 }
+
+// const FormattedName = ({ name }) => {
+//   const [formattedName, setFormattedName] = useState([]);
+
+//   useEffect(() => {
+//     if (name) {
+//       const letters = name.split("").map((char, index) => {
+//         return char.trim().length > 0 ? (
+//           <span key={index} className="letter">
+//             {char}
+//           </span>
+//         ) : (
+//           char
+//         );
+//       });
+//       setFormattedName(letters);
+//     }
+//   }, [name]);
+
+//   return <h1 className="my-name"> {formattedName}</h1>;
+// };
