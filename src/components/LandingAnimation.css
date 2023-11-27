@@ -27,3 +27,12 @@
   font-weight: 700;
   z-index: 2;
 }
+
+@media screen and (max-width: 415px) {
+  .landing-animation__loader {
+    width: 50%;
+  }
+  .landing-animation__name {
+    font-size: 5rem;
+  }
+}
