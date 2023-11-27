@@ -12,29 +12,33 @@ export default function Header() {
   };
 
   useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    const mobileBreakpoint = 415;
 
-    ScrollTrigger.create({
-      trigger: ".intersecting-element",
-      scrub: true,
-      start: "top 80%",
-      end: "bottom 20%",
-      onEnter: () => {
-        gsap.to("nav", { width: "85px", duration: 0.5 });
-        gsap.to(".link-name", {
-          opacity: 0,
-          duration: 0.3,
-          onComplete: () => {
-            gsap.set(".link-name", { display: "none" });
-          },
-        });
-      },
-      onLeaveBack: () => {
-        gsap.to("nav", { width: "165px", duration: 0.5 });
-        gsap.set(".link-name", { display: "flex" });
-        gsap.to(".link-name", { opacity: 1, duration: 0.3 });
-      },
-    });
+    if (window.innerWidth > mobileBreakpoint) {
+      gsap.registerPlugin(ScrollTrigger);
+
+      ScrollTrigger.create({
+        trigger: ".intersecting-element",
+        scrub: true,
+        start: "top 80%",
+        end: "bottom 20%",
+        onEnter: () => {
+          gsap.to("nav", { width: "85px", duration: 0.5 });
+          gsap.to(".link-name", {
+            opacity: 0,
+            duration: 0.3,
+            onComplete: () => {
+              gsap.set(".link-name", { display: "none" });
+            },
+          });
+        },
+        onLeaveBack: () => {
+          gsap.to("nav", { width: "165px", duration: 0.5 });
+          gsap.set(".link-name", { display: "flex" });
+          gsap.to(".link-name", { opacity: 1, duration: 0.3 });
+        },
+      });
+    }
   }, []);
 
   return (
