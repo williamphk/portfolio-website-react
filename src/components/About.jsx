@@ -37,10 +37,10 @@ export default function About() {
         translateY: 0,
         opacity: 1,
         ease: "expo.inOut",
-        duration: 2,
+        duration: 1.5,
         stagger: 0.05,
       },
-      "-=2.15"
+      "-=1.5"
     );
   }, []);
 

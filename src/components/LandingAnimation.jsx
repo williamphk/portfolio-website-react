@@ -20,7 +20,8 @@ const LandingAnimation = () => {
       }).to(".landing-animation__loader", {
         duration: 1.5,
         scaleY: 0,
-        height: "20vh",
+        backgroundColor: "#000",
+        // height: "20vh",
         ease: "expo.inOut",
         transformOrigin: "0% -100%",
       });
@@ -42,6 +43,7 @@ const LandingAnimation = () => {
   return (
     <div className="landing-animation__wrapper" ref={app}>
       <div className="landing-animation__loader"></div>
+      <div className="landing-animation__name">WP</div>
     </div>
   );
 };
