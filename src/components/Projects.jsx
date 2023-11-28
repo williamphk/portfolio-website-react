@@ -161,6 +161,7 @@ export default function Projects() {
             tabletVideoWidth={tabletVideoWidth}
             tabletVideoHeight={tabletVideoHeight}
           />
+          <ProjectEight projectEight={projectEight} />
           <ProjectTwo projectTwo={projectTwo} />
           <ProjectThree
             projectThree={projectThree}
@@ -175,6 +176,7 @@ export default function Projects() {
             tabletVideoWidth={tabletVideoWidth}
             tabletVideoHeight={tabletVideoHeight}
           />
+          <ProjectSeven projectSeven={projectSeven} />
           <ProjectFour
             projectFour={projectFour}
             videoSrcArray4={videoSrcArray4}
@@ -190,8 +192,6 @@ export default function Projects() {
           />
           <ProjectFive projectFive={projectFive} />
           <ProjectSix projectSix={projectSix} />
-          <ProjectSeven projectSeven={projectSeven} />
-          <ProjectEight projectEight={projectEight} />
         </div>
         {isTablet ? (
           <></>

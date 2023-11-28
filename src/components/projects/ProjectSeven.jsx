@@ -18,7 +18,7 @@ export default function ProjectSeven({ projectSeven }) {
             alt="A screenshot of my project 7"
           />
           <p className="project-description">
-            Collorated with UIUX designer to create a website for a non-profit
+            Collaborated with UIUX designer to create a website for a non-profit
             organization.
           </p>
           <div className="intersecting-element" data-img="6"></div>
