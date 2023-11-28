@@ -3,7 +3,7 @@
   --secondaryColor: #000000;
   --tertiaryColor: #f6f6f6;
   --bodyFontDesktop: clamp(1.5rem, 1.25vw, 3rem);
-  --bodyFontDesktopFooter: 18px;
+  --bodyFontDesktopFooter: clamp(0.9rem, 1vw, 2rem);
   --bodyFontPhone: 16px;
   --bodyFontPhoneFooter: 14px;
 }

@@ -11,7 +11,7 @@ section {
 .section-title {
   padding-left: clamp(1em, 2vw, 2em);
   color: var(--primaryColor);
-  font-size: 32px;
+  font-size: clamp(2rem, 1.75vw, 3.5rem);
   font-weight: 700;
   margin-bottom: 32px;
 }

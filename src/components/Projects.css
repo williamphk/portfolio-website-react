@@ -27,7 +27,7 @@
 
 .project-title {
   color: var(--primaryColor);
-  font-size: min(28px, 2.3vw);
+  font-size: clamp(1.75rem, 1.5vw, 3.25rem);
   font-weight: 700;
 }
 
