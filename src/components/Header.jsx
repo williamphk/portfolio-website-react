@@ -34,7 +34,8 @@ export default function Header() {
           });
         },
         onLeaveBack: () => {
-          gsap.to("nav", { width: "165px", duration: 0.5 });
+          gsap.to("nav", { minWidth: "165px", duration: 0.5 });
+          gsap.to("nav", { width: "auto", duration: 0.5 });
           gsap.to(".nav-link", { gap: "2em", duration: 0.3 });
           gsap.to(".link-name", { opacity: 1, duration: 0.3 });
           gsap.to(".link-name", { lineHeight: "29px", duration: 0.3 });

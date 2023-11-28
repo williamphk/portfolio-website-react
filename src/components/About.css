@@ -84,7 +84,7 @@
 
 .about-section-button {
   display: block;
-  width: 266px;
+  min-width: 266px;
   height: 66px;
   color: var(--primaryColor);
   text-align: center;
