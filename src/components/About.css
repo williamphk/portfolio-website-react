@@ -46,7 +46,7 @@
 
 .my-name {
   color: var(--primaryColor);
-  font-size: 8em;
+  font-size: clamp(8rem, 6.5vw, 14rem);
   font-weight: 400;
   line-height: 115px;
 }
@@ -56,10 +56,9 @@
 }
 
 .job-title {
-  font-size: 4em;
+  font-size: clamp(4rem, 3vw, 10rem);
   color: #1e50dd;
   font-weight: 400;
-  line-height: 85px;
   background: -webkit-linear-gradient(45deg, #09009f, #00e385 80%);
   background-clip: text;
   -webkit-background-clip: text;
