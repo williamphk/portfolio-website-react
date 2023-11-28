@@ -24,6 +24,7 @@ export default function Header() {
         end: "bottom 20%",
         onEnter: () => {
           gsap.to("nav", { width: "85px", duration: 0.3 });
+          gsap.to("nav", { minWidth: "auto", duration: 0.3 });
           gsap.to(".link-name", {
             opacity: 0,
             duration: 0.3,
