@@ -1,8 +1,11 @@
 import { Tooltip } from "react-tooltip";
 
-import javascript from "../../assets/icons/javascript.svg";
-import html from "../../assets/icons/html.svg";
-import css from "../../assets/icons/css.svg";
+import react from "../../assets/icons/react.svg";
+import node from "../../assets/icons/node.svg";
+import mongoDB from "../../assets/icons/mongoDB.svg";
+import express from "../../assets/icons/express.svg";
+import tailwind from "../../assets/icons/tailwind.svg";
+import passport from "../../assets/icons/passport.svg";
 
 export default function ProjectEight({ projectEight }) {
   return (
@@ -24,34 +27,63 @@ export default function ProjectEight({ projectEight }) {
           <div className="intersecting-element" data-img="7"></div>
           <h4 className="project-description">Key Features:</h4>
           <div className="hover-wrapper">
-            <button className="hover hover8">Google Map API</button>
+            <button className="hover hover8">
+              Custom authentication with refresh token
+            </button>
             <button className="hover hover8">
               Instant Notification with Socket.io
+            </button>
+            <button className="hover hover8">
+              Match with other users based on interested items
+            </button>
+            <button className="hover hover8">
+              Google Map API for finding route
             </button>
             <button className="hover hover8">Dark mode</button>
           </div>
           <div className="project-description">
             <img
-              src={html}
-              alt="html"
-              data-tooltip-id="html-tooltip"
-              data-tooltip-content="HTML"
+              src={node}
+              alt="node"
+              data-tooltip-id="node-tooltip"
+              data-tooltip-content="Node.js"
             />
-            <Tooltip id="html-tooltip" />
+            <Tooltip id="node-tooltip" />
             <img
-              src={css}
-              alt="css"
-              data-tooltip-id="css-tooltip"
-              data-tooltip-content="CSS"
+              src={react}
+              alt="react"
+              data-tooltip-id="react-tooltip"
+              data-tooltip-content="React.js"
             />
-            <Tooltip id="css-tooltip" />
+            <Tooltip id="react-tooltip" />
             <img
-              src={javascript}
-              alt="js"
-              data-tooltip-id="js-tooltip"
-              data-tooltip-content="JavaScript"
+              src={mongoDB}
+              alt="mongoDB"
+              data-tooltip-id="mongoDB-tooltip"
+              data-tooltip-content="MongoDB"
             />
-            <Tooltip id="js-tooltip" />
+            <Tooltip id="mongoDB-tooltip" />
+            <img
+              src={express}
+              alt="express"
+              data-tooltip-id="express-tooltip"
+              data-tooltip-content="Express.js"
+            />
+            <Tooltip id="express-tooltip" />
+            <img
+              src={passport}
+              alt="passport"
+              data-tooltip-id="passport-tooltip"
+              data-tooltip-content="Passport.js"
+            />
+            <Tooltip id="passport-tooltip" />
+            <img
+              src={tailwind}
+              alt="tailwind"
+              data-tooltip-id="tailwind-tooltip"
+              data-tooltip-content="Tailwind CSS"
+            />
+            <Tooltip id="tailwind-tooltip" />
           </div>
           <div className="project-button-wrapper">
             <a
