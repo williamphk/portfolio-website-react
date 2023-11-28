@@ -8,6 +8,8 @@ import ProjectThree from "./projects/ProjectThree.jsx";
 import ProjectFour from "./projects/ProjectFour.jsx";
 import ProjectFive from "./projects/ProjectFive.jsx";
 import ProjectSix from "./projects/ProjectSix.jsx";
+import ProjectSeven from "./projects/ProjectSeven.jsx";
+import ProjectEight from "./projects/ProjectEight.jsx";
 
 import projectOne from "../assets/project-one.webp";
 import projectTwo from "../assets/project-two.webp";
@@ -15,6 +17,8 @@ import projectThree from "../assets/project-three.webp";
 import projectFour from "../assets/project-four.webp";
 import projectFive from "../assets/project-five.webp";
 import projectSix from "../assets/project-six.png";
+import projectSeven from "../assets/project-seven.png";
+import projectEight from "../assets/project-eight.png";
 
 import register from "../assets/videos/Project_1/Register.mp4";
 import oauth from "../assets/videos/Project_1/OAuth.mp4";
@@ -42,6 +46,8 @@ export default function Projects() {
     projectFour,
     projectFive,
     projectSix,
+    projectSeven,
+    projectEight,
   ];
 
   const [currentVideoSrc, setCurrentVideoSrc] = useState(null);
@@ -184,6 +190,8 @@ export default function Projects() {
           />
           <ProjectFive projectFive={projectFive} />
           <ProjectSix projectSix={projectSix} />
+          <ProjectSeven projectSeven={projectSeven} />
+          <ProjectEight projectEight={projectEight} />
         </div>
         {isTablet ? (
           <></>
