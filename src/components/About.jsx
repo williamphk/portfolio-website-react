@@ -32,13 +32,86 @@ export default function About() {
 
     tl.fromTo(
       ".my-name .letter",
-      { translateY: 200, opacity: 0, delay: 0 },
+      { y: 20, opacity: 0 },
       {
-        translateY: 0,
+        y: 0,
         opacity: 1,
         ease: "expo.inOut",
         duration: 1.5,
         stagger: 0.05,
+      },
+      "-=1.5"
+    );
+
+    tl.fromTo(
+      ".profile-pic",
+      {
+        y: 20,
+        opacity: 0,
+      },
+      {
+        duration: 1.5,
+        y: 0,
+        opacity: 1,
+        ease: "expo.inOut",
+      }
+    );
+
+    tl.fromTo(
+      ".job-title",
+      {
+        y: 20,
+        opacity: 0,
+      },
+      {
+        duration: 1.5,
+        y: 0,
+        opacity: 1,
+        ease: "expo.inOut",
+      },
+      "-=1.5"
+    );
+
+    tl.fromTo(
+      ".self-introduction",
+      {
+        y: 20,
+        opacity: 0,
+      },
+      {
+        duration: 1.5,
+        y: 0,
+        opacity: 1,
+        ease: "expo.inOut",
+      },
+      "-=1.5"
+    );
+
+    tl.fromTo(
+      ".skills",
+      {
+        y: 20,
+        opacity: 0,
+      },
+      {
+        duration: 1.5,
+        y: 0,
+        opacity: 1,
+        ease: "expo.inOut",
+      },
+      "-=1.5"
+    );
+    tl.fromTo(
+      ".about-section-button",
+      {
+        y: 20,
+        opacity: 0,
+      },
+      {
+        duration: 1,
+        y: 0,
+        opacity: 1,
+        ease: "expo.inOut",
       },
       "-=1.5"
     );

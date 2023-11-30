@@ -53,6 +53,7 @@
 
 .my-name .letter {
   line-height: 1em;
+  display: inline-block;
 }
 
 .job-title {
