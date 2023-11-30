@@ -15,6 +15,18 @@ export default function Header() {
     const mobileBreakpoint = 415;
 
     if (window.innerWidth > mobileBreakpoint) {
+      gsap.fromTo(
+        "header",
+        { left: "-100%", position: "relative" },
+        {
+          left: "0%",
+          duration: 0.75,
+          ease: "expo.inOut",
+          duration: 1.5,
+          delay: 4.25,
+        }
+      );
+
       gsap.registerPlugin(ScrollTrigger);
 
       ScrollTrigger.create({

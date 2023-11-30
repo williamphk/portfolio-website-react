@@ -54,7 +54,8 @@ export default function About() {
         y: 0,
         opacity: 1,
         ease: "expo.inOut",
-      }
+      },
+      "-=1"
     );
 
     tl.fromTo(
@@ -108,7 +109,7 @@ export default function About() {
         opacity: 0,
       },
       {
-        duration: 1,
+        duration: 1.5,
         y: 0,
         opacity: 1,
         ease: "expo.inOut",
