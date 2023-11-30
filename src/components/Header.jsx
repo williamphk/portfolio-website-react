@@ -22,7 +22,6 @@ export default function Header() {
           left: "0%",
           duration: 0.75,
           ease: "expo.inOut",
-          duration: 1.5,
           delay: 4.25,
         }
       );
