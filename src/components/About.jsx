@@ -31,90 +31,37 @@ export default function About() {
     });
 
     tl.fromTo(
-      ".my-name .letter",
-      { y: 20, opacity: 0 },
+      ".my-name",
       {
-        y: 0,
-        opacity: 1,
-        ease: "expo.inOut",
-        duration: 1.5,
-        stagger: 0.05,
-      },
-      "-=1.5"
-    );
-
-    tl.fromTo(
-      ".profile-pic",
-      {
-        y: 20,
         opacity: 0,
+        y: 50,
+        // clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
       },
       {
-        duration: 1.5,
-        y: 0,
+        // "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
         opacity: 1,
+        y: 0,
+        duration: 1.5,
         ease: "expo.inOut",
       },
       "-=1"
     );
 
     tl.fromTo(
-      ".job-title",
+      ".profile-pic, .job-title, .self-introduction, .skills, .about-section-button",
       {
-        y: 20,
         opacity: 0,
+        y: 50,
+        // clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
       },
       {
-        duration: 1.5,
-        y: 0,
+        // "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
         opacity: 1,
+        y: 0,
+        duration: 1.5,
         ease: "expo.inOut",
       },
-      "-=1.5"
-    );
-
-    tl.fromTo(
-      ".self-introduction",
-      {
-        y: 20,
-        opacity: 0,
-      },
-      {
-        duration: 1.5,
-        y: 0,
-        opacity: 1,
-        ease: "expo.inOut",
-      },
-      "-=1.5"
-    );
-
-    tl.fromTo(
-      ".skills",
-      {
-        y: 20,
-        opacity: 0,
-      },
-      {
-        duration: 1.5,
-        y: 0,
-        opacity: 1,
-        ease: "expo.inOut",
-      },
-      "-=1.5"
-    );
-    tl.fromTo(
-      ".about-section-button",
-      {
-        y: 20,
-        opacity: 0,
-      },
-      {
-        duration: 1.5,
-        y: 0,
-        opacity: 1,
-        ease: "expo.inOut",
-      },
-      "-=1.5"
+      "-=0.5"
     );
   }, []);
 
@@ -128,20 +75,7 @@ export default function About() {
         className="profile-pic"
       />
 
-      <h1 className="my-name">
-        <span className="letter">W</span>
-        <span className="letter">i</span>
-        <span className="letter">l</span>
-        <span className="letter">l</span>
-        <span className="letter">i</span>
-        <span className="letter">a</span>
-        <span className="letter">m</span>
-        <span className="letter"> </span>
-        <span className="letter">P</span>
-        <span className="letter">o</span>
-        <span className="letter">o</span>
-        <span className="letter">n</span>
-      </h1>
+      <h1 className="my-name">William Poon</h1>
 
       <h2 className="job-title">{jobTitle}</h2>
       <p className="self-introduction">
@@ -431,10 +365,10 @@ export default function About() {
         />
         <Tooltip id="docker-tooltip" />
       </div>
-      <a href="#work" className="about-section-button">
+      {/* <a href="#work" className="about-section-button">
         Check out my works!
         <div className="button__shadow"></div>
-      </a>
+      </a> */}
       <a
         id="scroll-btn"
         href="#work"
