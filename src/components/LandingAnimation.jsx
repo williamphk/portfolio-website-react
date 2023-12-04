@@ -55,7 +55,7 @@ const LandingAnimation = () => {
       </div>
 
       <div className="wrapper">
-        <div className="line">Welcome to my profolio</div>
+        <div className="line">Welcome to my porfolio</div>
       </div>
     </div>
   );
