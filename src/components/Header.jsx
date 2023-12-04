@@ -20,9 +20,9 @@ export default function Header() {
         { left: "-100%", position: "relative" },
         {
           left: "0%",
-          duration: 0.75,
-          ease: "expo.inOut",
-          delay: 4.25,
+          duration: 2,
+          ease: "power4.inOut",
+          delay: 6.3,
         }
       );
 

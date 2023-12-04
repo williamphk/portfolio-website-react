@@ -7,43 +7,56 @@ const LandingAnimation = () => {
   const app = useRef(null);
 
   useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      const tl = gsap.timeline();
+    const tl = gsap.timeline();
 
-      tl.from(".landing-animation__loader", {
-        duration: 1.5,
-        y: 80,
-        scaleY: 0,
-        ease: "expo.inOut",
-        delay: 1,
-        transformOrigin: "50% 100%",
-      }).to(".landing-animation__loader", {
-        duration: 1.5,
-        scaleY: 0,
-        backgroundColor: "#000",
-        // height: "20vh",
-        ease: "expo.inOut",
-        transformOrigin: "0% -100%",
-      });
-
-      tl.to(
-        app.current,
-        {
-          duration: 2,
-          top: "-200%",
-          ease: "expo.inOut",
-        },
-        "-=0.25"
-      );
-    }, app);
-
-    return () => ctx.revert();
+    tl.to(".logo", {
+      backgroundPosition: "-400px 53%",
+      duration: 6.5,
+      ease: "none",
+    });
+    tl.to(
+      ".logo",
+      {
+        fontSize: "12rem",
+        top: "15%",
+        left: "-70rem",
+        duration: 2.5,
+        ease: "power4.inOut",
+      },
+      "-=5"
+    );
+    tl.to(
+      ".line",
+      {
+        duration: 1,
+        height: "10rem",
+        ease: "power4.inOut",
+      },
+      "-=4.25"
+    );
+    tl.to(
+      ".wrapper",
+      {
+        duration: 2.5,
+        left: "-100%",
+        ease: "power4.inOut",
+      },
+      "-=3"
+    );
   }, []);
 
   return (
-    <div className="landing-animation__wrapper" ref={app}>
-      <div className="landing-animation__loader"></div>
-      <div className="landing-animation__name">WP</div>
+    <div>
+      <div className="logo">
+        <h1>
+          HELLO <br />
+          WORLD
+        </h1>
+      </div>
+
+      <div className="wrapper">
+        <div className="line">Welcome to my profolio</div>
+      </div>
     </div>
   );
 };

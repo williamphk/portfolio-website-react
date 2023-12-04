@@ -26,7 +26,7 @@ export default function About() {
     tl.to(".animation-box", {
       duration: 2.2,
       y: "-100%",
-      ease: "expo.inOut",
+      ease: "power4.inOut",
       delay: 3.75,
     });
 
@@ -42,7 +42,7 @@ export default function About() {
         opacity: 1,
         y: 0,
         duration: 1.5,
-        ease: "expo.inOut",
+        ease: "power4.inOut",
       },
       "-=1"
     );
@@ -59,7 +59,7 @@ export default function About() {
         opacity: 1,
         y: 0,
         duration: 1.5,
-        ease: "expo.inOut",
+        ease: "power4.inOut",
       },
       "-=0.5"
     );
