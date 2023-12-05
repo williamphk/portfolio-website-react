@@ -43,7 +43,7 @@ const LandingAnimation = () => {
         ".line",
         {
           duration: 1,
-          height: "12rem",
+          height: "auto",
           ease: "power4.inOut",
         },
         "-=4.25"
@@ -66,7 +66,7 @@ const LandingAnimation = () => {
         ".line",
         {
           duration: 1,
-          height: "10rem",
+          height: "auto",
           ease: "power4.inOut",
         },
         "-=4.25"

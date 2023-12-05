@@ -63,3 +63,9 @@
     font-size: 5rem;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .line {
+    font-size: 4rem;
+  }
+}
