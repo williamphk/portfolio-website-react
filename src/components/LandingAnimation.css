@@ -47,3 +47,19 @@
   font-family: "Bebas Neue", cursive;
   font-weight: 700;
 }
+
+@media screen and (max-width: 768px) {
+  .logo {
+    font-size: 5rem;
+    top: 0;
+    left: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+  .line {
+    font-size: 5rem;
+  }
+}

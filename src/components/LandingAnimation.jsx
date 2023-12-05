@@ -14,26 +14,7 @@ const LandingAnimation = () => {
       duration: 6.5,
       ease: "none",
     });
-    tl.to(
-      ".logo",
-      {
-        fontSize: "12rem",
-        top: "15%",
-        left: "-70rem",
-        duration: 2.5,
-        ease: "power4.inOut",
-      },
-      "-=5"
-    );
-    tl.to(
-      ".line",
-      {
-        duration: 1,
-        height: "10rem",
-        ease: "power4.inOut",
-      },
-      "-=4.25"
-    );
+
     tl.to(
       ".wrapper",
       {
@@ -43,6 +24,54 @@ const LandingAnimation = () => {
       },
       "-=3"
     );
+
+    // create
+    let mm = gsap.matchMedia();
+
+    mm.add("(max-width: 800px)", () => {
+      tl.to(
+        ".logo",
+        {
+          fontSize: "12rem",
+          opacity: 0,
+          duration: 2.5,
+          ease: "power4.inOut",
+        },
+        "-=5"
+      );
+      tl.to(
+        ".line",
+        {
+          duration: 1,
+          height: "12rem",
+          ease: "power4.inOut",
+        },
+        "-=4.25"
+      );
+    });
+
+    mm.add("(min-width: 800px)", () => {
+      tl.to(
+        ".logo",
+        {
+          fontSize: "12rem",
+          top: "15%",
+          left: "-70rem",
+          duration: 2.5,
+          ease: "power4.inOut",
+        },
+        "-=5"
+      );
+      tl.to(
+        ".line",
+        {
+          duration: 1,
+          height: "10rem",
+          ease: "power4.inOut",
+        },
+        "-=4.25"
+      );
+    });
   }, []);
 
   return (
