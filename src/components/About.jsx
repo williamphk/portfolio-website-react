@@ -69,11 +69,11 @@ export default function About() {
     <section className="about" id="about">
       <div className="animation-box"></div>
       <p className="self-introduction">Hi! My name is</p>
-      <img
+      {/* <img
         src={profilePic}
         alt="William's profile pic"
         className="profile-pic"
-      />
+      /> */}
 
       <h1 className="my-name">William Poon</h1>
 
