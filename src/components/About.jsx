@@ -227,7 +227,7 @@ export default function About() {
           height="45"
           alt="styled-components"
         />
-        <Tooltip id="styledcomponents-tooltip" />
+        {/* <Tooltip id="styledcomponents-tooltip" />
         <img
           src="https://skillicons.dev/icons?i=github"
           data-tooltip-id="github-tooltip"
@@ -235,7 +235,7 @@ export default function About() {
           width="45"
           height="45"
           alt="Github"
-        />
+        /> */}
         <Tooltip id="github-tooltip" />
         <img
           src="https://skillicons.dev/icons?i=vercel"
@@ -245,7 +245,7 @@ export default function About() {
           height="45"
           alt="Vercel"
         />
-        <Tooltip id="vercel-tooltip" />
+        {/* <Tooltip id="vercel-tooltip" />
         <img
           src="https://skillicons.dev/icons?i=figma"
           data-tooltip-id="figma-tooltip"
@@ -253,7 +253,7 @@ export default function About() {
           width="45"
           height="45"
           alt="Figma"
-        />
+        /> */}
         <Tooltip id="figma-tooltip" />
         <img
           src="https://skillicons.dev/icons?i=wordpress"
@@ -319,7 +319,7 @@ export default function About() {
           alt="MySQL"
         />
         <Tooltip id="mysql-tooltip" />
-        <img
+        {/* <img
           src="https://skillicons.dev/icons?i=firebase"
           data-tooltip-id="firebase-tooltip"
           data-tooltip-content="Firebase"
@@ -327,7 +327,7 @@ export default function About() {
           height="45"
           alt="Firebase"
         />
-        <Tooltip id="firebase-tooltip" />
+        <Tooltip id="firebase-tooltip" /> */}
         <img
           src="https://skillicons.dev/icons?i=postman"
           data-tooltip-id="postman-tooltip"
