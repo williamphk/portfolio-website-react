@@ -52,6 +52,7 @@
 
 .job-title {
   font-size: clamp(4rem, 3vw, 10rem);
+  margin-bottom: 100px;
   color: #1e50dd;
   font-weight: 400;
   background: -webkit-linear-gradient(45deg, #09009f, #00e385 80%);

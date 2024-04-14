@@ -146,7 +146,7 @@ export default function About() {
           alt="CSS"
         />
         <Tooltip id="css-tooltip" />
-        <img
+        {/* <img
           src="https://skillicons.dev/icons?i=sass"
           data-tooltip-id="sass-tooltip"
           data-tooltip-content="SASS"
@@ -154,7 +154,7 @@ export default function About() {
           height="45"
           alt="SASS"
         />
-        <Tooltip id="sass-tooltip" />
+        <Tooltip id="sass-tooltip" /> */}
         <img
           src="https://skillicons.dev/icons?i=react"
           data-tooltip-id="react-tooltip"
@@ -163,7 +163,6 @@ export default function About() {
           height="45"
           alt="React.js"
         />
-
         <Tooltip id="react-tooltip" />
         <img
           src="https://skillicons.dev/icons?i=redux"
@@ -219,7 +218,7 @@ export default function About() {
           alt="jQuery"
         />
         <Tooltip id="jquery-tooltip" />
-        <img
+        {/* <img
           src="https://skillicons.dev/icons?i=styledcomponents"
           data-tooltip-id="styledcomponents-tooltip"
           data-tooltip-content="styled-components"
@@ -227,7 +226,7 @@ export default function About() {
           height="45"
           alt="styled-components"
         />
-        {/* <Tooltip id="styledcomponents-tooltip" />
+        <Tooltip id="styledcomponents-tooltip" /> */}
         <img
           src="https://skillicons.dev/icons?i=github"
           data-tooltip-id="github-tooltip"
@@ -235,9 +234,9 @@ export default function About() {
           width="45"
           height="45"
           alt="Github"
-        /> */}
+        />
         <Tooltip id="github-tooltip" />
-        <img
+        {/* <img
           src="https://skillicons.dev/icons?i=vercel"
           data-tooltip-id="vercel-tooltip"
           data-tooltip-content="Vercel"
@@ -245,7 +244,7 @@ export default function About() {
           height="45"
           alt="Vercel"
         />
-        {/* <Tooltip id="vercel-tooltip" />
+        <Tooltip id="vercel-tooltip" /> */}
         <img
           src="https://skillicons.dev/icons?i=figma"
           data-tooltip-id="figma-tooltip"
@@ -253,7 +252,7 @@ export default function About() {
           width="45"
           height="45"
           alt="Figma"
-        /> */}
+        />
         <Tooltip id="figma-tooltip" />
         <img
           src="https://skillicons.dev/icons?i=wordpress"
