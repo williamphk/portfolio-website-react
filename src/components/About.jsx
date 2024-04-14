@@ -182,7 +182,7 @@ export default function About() {
           alt="Tailwind CSS"
         />
         <Tooltip id="tailwind-tooltip" />
-        <img
+        {/* <img
           src="https://skillicons.dev/icons?i=materialui"
           data-tooltip-id="materialui-tooltip"
           data-tooltip-content="Material UI"
@@ -190,7 +190,7 @@ export default function About() {
           height="45"
           alt="Material UI"
         />
-        <Tooltip id="materialui-tooltip" />
+        <Tooltip id="materialui-tooltip" /> */}
         <img
           src="https://skillicons.dev/icons?i=webpack"
           data-tooltip-id="webpack-tooltip"
@@ -354,7 +354,7 @@ export default function About() {
           alt="Azure"
         />
         <Tooltip id="azure-tooltip" />
-        <img
+        {/* <img
           src="https://skillicons.dev/icons?i=docker"
           data-tooltip-id="docker-tooltip"
           data-tooltip-content="Docker"
@@ -362,7 +362,7 @@ export default function About() {
           height="45"
           alt="Docker"
         />
-        <Tooltip id="docker-tooltip" />
+        <Tooltip id="docker-tooltip" /> */}
       </div>
       {/* <a href="#work" className="about-section-button">
         Check out my works!
